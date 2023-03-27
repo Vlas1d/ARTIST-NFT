@@ -28,12 +28,29 @@ body {
     }
 
     &__switch {
+        position: relative;
         padding: 7px 8px;
         margin-top: 13px;
         width: 274px;
         display: flex;
         background: #212426;
         border-radius: 12px;
+        transition: all 0.2s;
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 129px;
+            height: 56px;
+            background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+            border-radius: 12px;
+            transition: all 0.2s;
+        }
+        &_active {
+            &::after {
+                transform: translateX(100%);
+            }
+        }
     }
 
     &__login,
@@ -50,20 +67,18 @@ body {
         border-radius: 12px;
         color: #fff;
         transition: all 0.2s;
+        z-index: 2;
         cursor: pointer;
         &:hover {
             font-weight: 700;
             font-size: 18px;
             line-height: 24px;
-            color: #1d1f21;
-            background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         }
         &_active {
             font-weight: 700;
             font-size: 18px;
             line-height: 24px;
             color: #1d1f21;
-            background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         }
     }
 
@@ -196,15 +211,13 @@ body {
         line-height: 21px;
         color: #c8d2dc;
     }
+
+    &_active {
+        display: flex;
+    }
 }
 .registrationPassword {
     margin-top: 15px;
-    font-family: 'Proxima Nova';
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #c8d2dc;
-    text-align: center;
 }
 .blur-left,
 .blur-right {
