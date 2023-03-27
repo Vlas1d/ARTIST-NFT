@@ -1,0 +1,46 @@
+@import "modules/header";
+@import "modules/footer";
+@import "modules/icons";
+
+
+//-----INIT-STYLES--------------------------------
+
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+ul, ol, li {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    
+}
+img {
+    width: initial;
+    height: initial;
+}
+html, body {
+    position: relative;
+    width: 100vw;
+}
+main {
+    position: relative;
+}
+body {
+    overflow-x: hidden;
+}
+html {
+    overflow-x: hidden;
+}
+button {
+    background: transparent;
+    border: transparent;
+}
