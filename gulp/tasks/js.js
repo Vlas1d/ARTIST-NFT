@@ -12,7 +12,7 @@ export const js = () => {
         .pipe(webpack({
             mode: 'development',
             output: {
-                filename: 'script.js',
+                filename: 'script.[name].js',
             }
         }))
 
