@@ -1,6 +1,8 @@
 @import "modules/header";
 @import "modules/footer";
 @import "modules/icons";
+@import "modules/fonts";
+@import "modules/buttons";
 
 //-----INIT-STYLES--------------------------------
 
@@ -35,9 +37,11 @@ main {
 }
 body {
     overflow-x: hidden;
+    min-height: 100vh;
 }
 html {
     overflow-x: hidden;
+    background: #1D1F21;
 }
 button {
     background: transparent;
