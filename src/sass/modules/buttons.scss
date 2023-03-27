@@ -1,0 +1,46 @@
+@mixin button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 122px;
+    height: 64px;
+    padding: 0px 22px;
+    border-radius: 16px;
+
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+}
+
+.button {
+    @include button();
+
+    &_gradient {
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+
+        span {
+            color: #1D1F21;
+        }
+    }
+    &_opacity {
+        background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
+        opacity: 0.7;
+
+        span {
+            background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+    &_black {
+        background: #1D1F21;
+
+        span {
+            background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+}
