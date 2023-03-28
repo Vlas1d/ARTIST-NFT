@@ -14,3 +14,11 @@ testWebP(function (support) {
         document.querySelector('html').classList.add('no-webp');
     }
 });
+
+//--------------------MENU-BURGER-----------------------------------------------------------------------
+
+$('.burger-button').on('click', function () {
+    $('.mobile-menu').toggleClass('opened');
+});
+
+//------------------------------------------------------------------------------------------------------
