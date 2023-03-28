@@ -7,6 +7,7 @@
     height: 64px;
     padding: 0px 22px;
     border-radius: 16px;
+    transition: 0.15s ease 0s;
 
     font-family: 'Proxima Nova';
     font-weight: 700;
@@ -17,7 +18,14 @@
     @include button();
 
     &_gradient {
-        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%) border-box, 
+        linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%) padding-box;
+        border: 0.5px solid transparent;
+
+        &:hover {
+            box-shadow: 0px 0px 10px #68C9FFd2;
+            border: 0.5px solid #1D1F21;
+        }
 
         span {
             color: #1D1F21;
@@ -26,6 +34,13 @@
     &_opacity {
         background: linear-gradient(94.78deg, rgba(104, 201, 255, 0.1) 9.27%, rgba(209, 181, 255, 0.1) 84.06%);
         opacity: 0.7;
+        border: 0.5px solid transparent;
+
+        &:hover {
+            box-shadow: 0px 0px 10px #bd94ff;
+            border: 0.5px solid #bd94ff;
+            //box-shadow: 0px 0px 15px#9553ffc5;
+        }
 
         span {
             background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
@@ -36,6 +51,12 @@
     }
     &_black {
         background: #1D1F21;
+        border: 0.5px solid transparent;
+
+        &:hover {
+            box-shadow: 0px 0px 15px #9553ff99;
+            border: 0.5px solid #8a41ffe0;
+        }
 
         span {
             background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
