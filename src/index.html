@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/head.html', {
-"title":"Main",
-"thisStyle":"css/main.min.css"
+"title":"Artist-NFT",
+"thisStyle":"css/style.main.min.css"
 })
 
 <body>
     @@include('html/header.html', {})
     <main>
-
+        <section class="main-window">
+            <div class="main-window__text">
+                <span class="main-window__social">
+                    <a href="#"><img src="@icons/inst-gradient.svg" alt="inst"></a>
+                    <a href="#"><img src="@icons/twitter-gradient.svg" alt="twitter"></a>
+                    <a href="#"><img src="@icons/telegram-gradient.svg" alt="telegram"></a>
+                    <a href="#"><img src="@icons/pinterest-gradient.svg" alt="pinterest"></a>
+                </span>
+                <h1>We are here to inspire and share art</h1>
+                <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated</p>
+                <span class="main-window__buttons">
+                    <a class="button button_gradient"><img src="@icons/crown.svg" alt="crown"><span>Premium
+                            access</span></a>
+                    <a class="button button_opacity"><span>Discover</span></a>
+                </span>
+            </div>
+            <div class="main-window__image">
+                <div class="main-window__gradient-box">
+                    <img src="@img/main/girl.png" alt="girl">
+                    <img src="@img/main/arc.png" alt="arc">
+                </div>
+            </div>
+            <div class="main-window__decor">
+                <div class="decor-circle decor-1"></div>
+                <div class="decor-circle decor-2"></div>
+                <img src="@icons/romb-star.svg" alt="star" class="decor-3">
+                <img src="@icons/romb-star.svg" alt="star" class="decor-4">
+                <span class="opacity-text decor-5">MAKE ART</span>
+                <span class="opacity-text decor-6">NOT WAR</span>
+            </div>
+        </section>
     </main>
     @@include('html/footer.html', {})
 </body>

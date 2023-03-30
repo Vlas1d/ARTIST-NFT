@@ -3,15 +3,27 @@
     align-items: center;
     justify-content: center;
 
-    min-width: 122px;
+    min-width: 116px;
     height: 64px;
-    padding: 0px 22px;
+    padding: 0px 21px;
     border-radius: 16px;
     transition: 0.15s ease 0s;
 
     font-family: 'Proxima Nova';
     font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
     white-space: nowrap;
+
+    @media (max-width: 768px) {
+        min-width: 96px;
+        height: 52px;
+        padding: 0px 16px;
+        border-radius: 12px;
+
+        font-size: 15px;
+        line-height: 26px;
+    }
 }
 
 .button {

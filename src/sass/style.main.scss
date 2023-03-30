@@ -1,0 +1,201 @@
+.main-window {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1150px;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 79px 21px 50px 20px;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        padding: 62px 15px 50px 15px;
+    }
+
+    &__text {
+        max-width: 450px;
+        width: 100%;
+        margin-top: -63px;
+
+        z-index: 2;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            max-width: 100%;
+            margin-top: 0px;
+
+            h1 {
+                max-width: 80%;
+                margin-bottom: 9px;
+            }
+            p {
+                line-height: 24px;
+            }
+        }
+
+        & > h1 {
+            margin-bottom: 14px;
+        }
+        & > p {
+            max-width: 270px;
+            width: 100%;
+            line-height: 28px;
+        }
+    }
+
+    &__social {
+        display: block;
+        margin-left: -3px;
+        margin-bottom: 22px;
+        
+        @media (max-width: 1000px) {
+            display: none;
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 18px;
+        }
+        & > *:hover {
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+                filter: blur(10px);
+                margin-top: -7px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        gap: 13px;
+        margin-top: 40px;
+
+        @media (max-width: 1000px) {
+            margin-top: 21px;
+            width: 100%;
+
+            .button_opacity {
+                max-width: 117px;
+                width: 100%;
+            }
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 8px;
+            }
+        }
+
+        img {
+            margin-right: 8px;
+        }
+        .button_opacity {
+            max-width: 145px;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        @media (max-width: 1000px) {
+            width: 100%;
+            margin-top: 75px;
+        }
+    }
+
+    &__gradient-box {
+        position: relative;
+        width: 460px;
+        height: 633px;
+        background: linear-gradient(110deg, #D1B5FF 9.27%, #68C9FF 84.06%);
+        border-radius: 24px;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+            height: 306px;
+        }
+
+        & > * {
+            position: absolute;
+        }
+        & > *:first-child {
+            bottom: -44px;
+            right: -47px;
+            img {
+                width: 769px;
+                height: 691px;
+            }
+
+            @media (max-width: 1000px) {
+                bottom: -28px;
+                right: -105px;
+                img {
+                    width: 460px;
+                    height: 412px;
+                }
+            }
+        }
+        & > *:last-child {
+            right: 464px;
+            bottom: 80px;
+            img {
+                width: 222px;
+                height: 347px;
+            }
+
+            @media (max-width: 1000px) {
+                bottom: 50px;
+                right: 205px;
+                img {
+                    width: 127px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+
+        & > * {
+            position: absolute;
+        }
+
+        .decor-1 { top: 49px; right: 25px; width: 10px; height: 10px; }
+        .decor-2 { top: 228px; right: 44.2%; width: 25px; height: 25px; }
+        .decor-3 { top: 59px; right: 44.5%; width: 46px; height: 62px; }
+        .decor-4 { bottom: 174px; left: 42.4%; width: 36px; height: 48px; }
+        .decor-5 { top: 17px; left: -162px; }
+        .decor-6 { bottom: 50px; left: 29.3%; }
+
+        @media (max-width: 1000px) {
+            .decor-3 { display: none; }
+        }
+        @media (max-width: 768px) {
+            .decor-1 { display: none; }
+            .decor-2 { top: 398px; left: 28%; }
+            .decor-4 { bottom: 357px; left: 0.4%; width: 27px; height: 42px; }
+            .decor-5 { top: 6px; left: 187px; }
+            .decor-6 { bottom: 150px; left: 10%; }
+        }
+
+    }
+}
