@@ -1,0 +1,29 @@
+.decor-circle {
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+    pointer-events: none;
+
+    border: 1px solid #FCFFFF;
+    border-radius: 50%;
+}
+
+.opacity-text {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    opacity: 0.2;
+    white-space: nowrap;
+
+    @media (max-width: 1000px) {
+        font-size: 50px;
+        line-height: 61px;
+    }
+}

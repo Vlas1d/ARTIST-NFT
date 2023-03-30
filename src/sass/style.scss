@@ -2,6 +2,7 @@
 @import "modules/footer";
 @import "modules/fonts";
 @import "modules/buttons";
+@import "modules/decor";
 
 //-----INIT-STYLES--------------------------------
 
@@ -20,7 +21,7 @@ ul, ol, li {
     list-style: none;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
+    font-weight: 700;
     
 }
 img {
@@ -33,16 +34,37 @@ html, body {
 }
 main {
     position: relative;
+    padding-top: 64px;
 }
 body {
     overflow-x: hidden;
     min-height: 100vh;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
 }
 html {
     overflow-x: hidden;
+    font-family: 'Proxima Nova';
+    font-weight: 400;
+    color: #FCFFFF;
     background: #1D1F21;
 }
 button {
     background: transparent;
     border: transparent;
+}
+
+h1 {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-size: 64px;
+    line-height: 65px;
+    color: #FCFFFF;
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+        line-height: 40px;
+    }
 }

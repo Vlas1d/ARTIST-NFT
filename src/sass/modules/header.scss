@@ -1,5 +1,7 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     display: flex;
 
     width: 100vw;
@@ -214,7 +216,8 @@
         margin-bottom: 20px;
     }
     & > *:not(.button):hover {
-        text-shadow: 0px 0px 5px#9657fc, 0px 0px 10px#9657fc;
+        color: #000000;
+        text-shadow: 0px 0px 5px#a56eff, 0px 0px 5px#ab76ff;
     }
     .button:hover {
         box-shadow: 0px 0px 10px#863bff70, 0px 0px 10px#863bff70;
