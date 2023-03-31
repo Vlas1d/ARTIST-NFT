@@ -1,3 +1,17 @@
+@mixin decor-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    & > * {
+        position: absolute;
+    }
+}
+
 .main-window {
     position: relative;
     display: flex;
@@ -52,7 +66,7 @@
     &__social {
         display: block;
         margin-left: -3px;
-        margin-bottom: 22px;
+        margin-bottom: 19px;
         
         @media (max-width: 1000px) {
             display: none;
@@ -131,15 +145,15 @@
             position: absolute;
         }
         & > *:first-child {
-            bottom: -44px;
-            right: -47px;
+            bottom: -49px;
+            right: -48px;
             img {
                 width: 769px;
                 height: 691px;
             }
 
             @media (max-width: 1000px) {
-                bottom: -28px;
+                bottom: -32px;
                 right: -105px;
                 img {
                     width: 460px;
@@ -149,14 +163,14 @@
         }
         & > *:last-child {
             right: 464px;
-            bottom: 80px;
+            bottom: 76px;
             img {
                 width: 222px;
                 height: 347px;
             }
 
             @media (max-width: 1000px) {
-                bottom: 50px;
+                bottom: 46px;
                 right: 205px;
                 img {
                     width: 127px;
@@ -167,17 +181,7 @@
     }
 
     &__decor {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-
-        & > * {
-            position: absolute;
-        }
+        @include decor-box();
 
         .decor-1 { top: 49px; right: 25px; width: 10px; height: 10px; }
         .decor-2 { top: 228px; right: 44.2%; width: 25px; height: 25px; }
@@ -197,5 +201,249 @@
             .decor-6 { bottom: 150px; left: 10%; }
         }
 
+    }
+}
+
+//------------------------------------------------------------------------------------------------------
+
+.biography {
+    position: relative;
+    margin: 0px auto;
+    max-width: 1110px;
+    padding: 40px 21px 50px 20px;
+
+    display: grid;
+    grid-template-columns: 520px 1fr;
+    grid-template-rows: auto;
+    gap: 0px;
+
+    @media (max-width: 1200px) {
+        padding: 40px 21px 50px 30px;
+        grid-template-columns: 470px 1fr;
+    }
+    @media (max-width: 1000px) {
+        padding: 11px 15px 50px 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    &__image {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        img {
+            width: 445px;
+            height: 570px;
+        }
+
+        @media (max-width: 1000px) {
+            grid-row-start: 2;
+            grid-row-end: 3;
+
+            img {
+                width: 254px;
+                height: 326px;
+            }
+
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        margin-top: 44px;
+
+        h2 {
+            margin-top: -1px;
+        }
+
+        @media (max-width: 1100px) {
+            margin-top: 0px;
+
+            h2 {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &__info {
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        margin-top: 16px;
+
+        @media (max-width: 1000px) {
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+            margin-top: 53px;
+        }
+    }
+
+
+    &__gradient-box {
+        width: 449px;
+        height: 590px;
+
+        background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+        border-radius: 24px;
+        transform: rotate(-3.86deg) translate(-14px, 11px);
+
+        @media (max-width: 1000px) {
+            width: 256px;
+            height: 337px;
+
+            transform: rotate(-3.86deg) translate(14px, 29px);
+
+            img {
+                transform: rotate(7deg) translate(32px, 11px);
+                border-radius: 23px;
+            }
+        }
+
+        img {
+            transform: rotate(3.86deg) translate(25px, 15px);
+        }
+    }
+
+    &__history {
+        margin-top: 40px;
+
+        @media (max-width: 1000px) {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 32px;
+        }
+    }
+
+    &__decor {
+        @include decor-box();
+        
+        .decor-1 { bottom: 297px; left: -5.7%; width: 25px; height: 25px; }
+        .decor-2 { top: 192px; left: -8%; width: 46px; height: 62px; }
+    }
+}
+
+.story-bio {
+    display: flex;
+    gap: 35px;
+
+    @media (max-width: 768px) {
+        gap: 10px;
+
+        p {
+            margin-top: 13px;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    &__item {
+        max-width: 155px;
+        width: 100%;
+    }
+    p {
+        margin-top: 11px;
+        font-weight: 600;
+    }
+
+    &__year {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 32px;
+
+        @media (max-width: 768px) {
+            height: 29px;
+        }
+
+        &_green {
+            color: #C5FF98;
+            background: rgba(197, 255, 152, 0.1);
+            border-radius: 10px;
+        }
+    }
+}
+
+//--------------------------------------------------------------------------------------------
+
+.premium {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1140px;
+    width: 100%;
+    height: 446px;
+    margin: 42px auto 0px;
+    
+    background: linear-gradient(94.78deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%);
+    border-radius: 24px;
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+        
+    }
+
+    &__text {
+        max-width: 440px;
+        width: 100%;
+        margin-left: 110px;
+
+        img {
+            margin-bottom: 2px;
+        }
+        p {
+            margin: 13px 0px 11px;
+        }
+        .button {
+            max-width: 167px;
+            width: 100%;
+        }
+    }
+
+    &__diamonds {
+        width: 400px;
+    }
+
+    &__gradient-circle {
+        position: absolute;
+        top: 13px;
+        left: 62px;
+        width: 512px;
+        height: 512px;
+
+        position: relative;
+        border: 64px solid #ffffff4a;
+        border-radius: 50%;
+
+        & > * {
+            position: absolute;
+            &:nth-child(1) {
+                top: -68px;
+                left: -152px;
+                transform: rotate(-10.5deg);
+            }
+            &:nth-child(2) {
+                top: 17%;
+                left: -148px;
+                transform: rotate(8.04deg);
+            }
+            &:nth-child(3) {
+                bottom: -53px;
+                left: 45px;
+                transform: rotate(-44.21deg);
+            }
+        }
     }
 }

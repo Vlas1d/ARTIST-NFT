@@ -3,6 +3,7 @@
     top: 0px;
     left: 0px;
     display: flex;
+    align-items: center;
 
     width: 100vw;
     height: 64px;
@@ -31,7 +32,7 @@
     }
 
     &__logo {
-        margin: 4px 34px 0px 8px;
+        margin: 10px 34px 0px 8px;
     }
 
     &__menu {
@@ -79,7 +80,7 @@
         margin-left: auto;
 
         img {
-            margin-top: 4px;
+            margin-top: 10px;
         }
 
         @media (min-width: 920.1px) {
