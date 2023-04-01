@@ -3,15 +3,27 @@
     align-items: center;
     justify-content: center;
 
-    min-width: 122px;
+    min-width: 116px;
     height: 64px;
-    padding: 0px 22px;
+    padding: 0px 21px;
     border-radius: 16px;
     transition: 0.15s ease 0s;
 
     font-family: 'Proxima Nova';
     font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
     white-space: nowrap;
+
+    @media (max-width: 768px) {
+        min-width: 96px;
+        height: 52px;
+        padding: 0px 16px;
+        border-radius: 12px;
+
+        font-size: 15px;
+        line-height: 26px;
+    }
 }
 
 .button {
@@ -54,8 +66,8 @@
         border: 0.5px solid transparent;
 
         &:hover {
-            box-shadow: 0px 0px 15px #9553ff99;
-            border: 0.5px solid #8a41ffe0;
+            box-shadow: 0px 0px 5px #4f00cf, 0px 0px 10px #5200d5;
+            border: 0.5px solid #bd94ff;
         }
 
         span {

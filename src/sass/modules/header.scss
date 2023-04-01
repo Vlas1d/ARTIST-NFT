@@ -1,6 +1,9 @@
 .header {
-    position: relative;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     display: flex;
+    align-items: center;
 
     width: 100vw;
     height: 64px;
@@ -29,7 +32,7 @@
     }
 
     &__logo {
-        margin: 4px 34px 0px 8px;
+        margin: 10px 34px 0px 8px;
     }
 
     &__menu {
@@ -77,7 +80,7 @@
         margin-left: auto;
 
         img {
-            margin-top: 4px;
+            margin-top: 10px;
         }
 
         @media (min-width: 920.1px) {
@@ -214,7 +217,8 @@
         margin-bottom: 20px;
     }
     & > *:not(.button):hover {
-        text-shadow: 0px 0px 5px#9657fc, 0px 0px 10px#9657fc;
+        color: #000000;
+        text-shadow: 0px 0px 5px#a56eff, 0px 0px 5px#ab76ff;
     }
     .button:hover {
         box-shadow: 0px 0px 10px#863bff70, 0px 0px 10px#863bff70;
