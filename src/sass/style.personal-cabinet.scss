@@ -1,4 +1,6 @@
 @import 'modules/fonts';
+@import 'modules/buttons.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -23,3 +25,4 @@ ul {
 @import 'block/personal-cabinet/aside';
 @import 'block/personal-cabinet/chat';
 @import 'block/personal-cabinet/main';
+@import 'block/personal-cabinet/orders'

@@ -43,13 +43,13 @@
                 <li class="sidemenu__list-item">
                     <img src="@icons/personal-cabinet/messages.svg" alt="messages" class="sidemenu__img">
                     <img src="@icons/personal-cabinet/messages-color.svg" alt="messages"
-                        class="aside__img-hide sidemenu__img-hide_active">
+                        class="sidemenu__img-hide sidemenu__img-hide_active">
                     Messages
                 </li>
                 <li class="sidemenu__list-item">
                     <img src="@icons/personal-cabinet/bag.svg" alt="messages" class="sidemenu__img">
                     <img src="@icons/personal-cabinet/bag-color.svg" alt="messages"
-                        class="aside__img-hide">
+                        class="sidemenu__img-hide">
                     Orders
                 </li>
                 <li class="sidemenu__list-item">
@@ -102,7 +102,7 @@
         </aside>
         <main class="main">
             <div class="main__tabs">
-                <div class="main__tab">
+                <div class="main__tab main__tab_active">
                     <div class="messages">
                         @@include('html/personal-cabinet/chat-list.html', {})
                         <div class="messages__divider"></div>
@@ -193,6 +193,9 @@
                         </div>
                         @@include('html/personal-cabinet/chating.html', {})
                     </div>
+                </div>
+                <div class="main__tab">
+                    @@include('html/personal-cabinet/orders.html', {})
                 </div>
             </div>
         </main>
