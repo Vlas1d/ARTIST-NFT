@@ -1,3 +1,5 @@
+@import "modules/nft-card";
+
 @mixin decor-box {
     position: absolute;
     top: 0px;
@@ -222,7 +224,7 @@
         grid-template-columns: 470px 1fr;
     }
     @media (max-width: 1000px) {
-        padding: 11px 15px 50px 15px;
+        padding: 11px 15px 0px 15px;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
     }
@@ -387,18 +389,43 @@
     height: 446px;
     margin: 42px auto 0px;
     
-    background: linear-gradient(94.78deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%);
+    background: linear-gradient(150deg, #6880FF 9.27%, #3CA7F4 50.77%, #8C45FF 84.06%);
     border-radius: 24px;
     overflow: hidden;
 
     @media (max-width: 768px) {
-        
+        flex-direction: column;
+
+        max-width: 92%;
+        height: 514px;
+        margin: 6px auto 0px;
+
+        padding: 32px 26px;
     }
 
     &__text {
         max-width: 440px;
         width: 100%;
         margin-left: 110px;
+
+        @media (max-width: 768px) {
+            margin-left: 0px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 0px;
+            }
+            h2 {
+                margin-top: -4px;
+            }
+            p {
+                margin: 9px 0px 23px;
+            }
+            .button {
+                max-width: 135px;
+            }
+        }
 
         img {
             margin-bottom: 2px;
@@ -418,8 +445,9 @@
 
     &__gradient-circle {
         position: absolute;
-        top: 13px;
-        left: 62px;
+        //top: 13px;
+        bottom: -13px;
+        left: 53px;
         width: 512px;
         height: 512px;
 
@@ -427,23 +455,106 @@
         border: 64px solid #ffffff4a;
         border-radius: 50%;
 
+        @media (max-width: 768px) {
+            bottom: -65px;
+            left: 0px;
+
+            width: 399px;
+            height: 399px;
+
+            border: 48px solid #ffffff4a;
+        }
+
         & > * {
             position: absolute;
             &:nth-child(1) {
                 top: -68px;
                 left: -152px;
                 transform: rotate(-10.5deg);
+
+                img {
+                    width: 180px;
+                    height: 122px;   
+                }
+
+                @media (max-width: 768px) {
+                    top: 5px;
+                    left: -84px;
+                    transform: rotate(24deg);
+
+                    img {
+                        width: 147px;
+                        height: 95px;   
+                    }
+                }
             }
             &:nth-child(2) {
                 top: 17%;
                 left: -148px;
                 transform: rotate(8.04deg);
+
+                img {
+                    width: 332px;
+                    height: 240px;   
+                }
+
+                @media (max-width: 768px) {
+                    top: -28.5%;
+                    left: 48px;
+                    transform: rotate(0deg);
+
+                    img {
+                        width: 207px;
+                        height: 149px;
+                    }
+                }
             }
             &:nth-child(3) {
                 bottom: -53px;
                 left: 45px;
                 transform: rotate(-44.21deg);
+
+                img {
+                    width: 251px;
+                    height: 184px;     
+                }
+
+                @media (max-width: 768px) {
+                    bottom: 163px;
+                    left: 223px;
+                    transform: rotate(-44.21deg);
+
+                    img {
+                        width: 134px;
+                        height: 94px;   
+                    }
+                }
             }
         }
+    }
+}
+
+//---------------------------------------------------------------------------------------------
+
+.nft-slider {
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+
+    margin-top: 12px;
+    
+    overflow: visible !important;
+    z-index: 3;
+
+    .swiper-wrapper {
+        width: 100%;
+    }
+    .swiper-slide {
+        width: auto;
+        transition: transform 0.5s ease 0s;
+    }
+    .swiper-slide-active {
+        transform: translate(0px, -31px);
     }
 }
