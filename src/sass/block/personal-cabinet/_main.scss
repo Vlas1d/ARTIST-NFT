@@ -9,6 +9,10 @@
 
     &__tab {
         height: 100%;
+        display: none;
+        &_active {
+            display: block;
+        }
     }
 }
 @media (max-width: 768px) {
