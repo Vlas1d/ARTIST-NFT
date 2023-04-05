@@ -117,10 +117,11 @@
             flex-direction: column;
             gap: 8px;
         }
+        .chat__back {
+            display: flex;
+        }
         .chat__info {
-            margin-left: 5px;
             padding-left: 15px;
-            width: 97%;
             height: 78px;
             background: #212426;
             border-radius: 12px;
@@ -135,7 +136,8 @@
             &::after {
                 content: '';
                 position: absolute;
-                width: 12px;height: 12px;
+                width: 12px;
+                height: 12px;
                 border-radius: 50%;
                 border: 1px solid #212121;
                 background-color: #47cd7d;
@@ -152,20 +154,23 @@
         .chat__time {
             display: block;
         }
+        .chat__msg-second-text {
+            width: 299px;
+        }
     }
 
     &__header {
         display: flex;
     }
     &__back {
-        margin-left: 8px;
-        display: flex;
+        margin-left: 3px;
+        display: none;
         align-items: center;
         font-family: 'Proxima Nova';
         font-weight: 700;
         font-size: 20px;
         line-height: 30px;
-        color: #FCFFFF;
+        color: #fcffff;
         svg {
             margin-right: 14px;
             cursor: pointer;
@@ -231,11 +236,9 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        flex-grow: 1;
         overflow-y: scroll;
         &-wrapper {
             display: flex;
-            height: 110%;
             flex-direction: column;
             justify-content: flex-end;
         }
@@ -249,6 +252,8 @@
         border-radius: 8px 8px 0px 8px;
         background: #2c2f33;
         img {
+            width: 100%;
+            height: 100%;
             vertical-align: middle;
         }
     }
@@ -474,10 +479,8 @@
             display: none;
         }
         &__msg-img {
-            img {
-                width: 190px;
-                height: 190px;
-            }
+            width: 190px;
+            height: 190px;
         }
     }
 }
@@ -506,6 +509,39 @@
     }
     .chat {
         display: none;
+        padding: 18px 15px 28px;
+        &__info {
+        }
+        &__msg-img {
+            width: 248px;
+            height: 248px;
+        }
+        &__new-msg {
+            padding-right: 1px;
+            margin: 8px 0 15px;
+        }
+        &__msg-text_hide,
+        &__msg-time_hide {
+            display: none;
+        }
+        &__input {
+            margin-top: 27px;
+        }
+        &__input-ent {
+            height: 56px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &__input-btn {
+            right: 11.5px;
+            svg {
+                display: block;
+                height: 20px;
+            }
+        }
+        &__msg-second-img {
+            display: block;
+        }
     }
     .chat-list {
         padding: 0;

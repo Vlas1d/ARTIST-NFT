@@ -41,8 +41,123 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     formInfo.forEach(elem => {
-        elem.addEventListener('click', ({target}) => {
+        elem.addEventListener('click', ({ target }) => {
             target.getAttribute('data-auth') == 'login' ? switchAuth(false) : switchAuth(true);
         });
     });
+
+    // TODO Сделать регистрацию с занисением в excel
+
+    const formLogin = document.querySelector('.form__login');
+    const formReg = document.querySelector('.form__registration');
+
+    const emailLogin = document.querySelector('#loginEmail');
+    const passLogin = document.querySelector('#loginPassword');
+
+    const roleReg = document.querySelectorAll('.form__fieldset input');
+    const emailReg = document.querySelector('#registrationEmail');
+    const passReg = document.querySelector('#registrationPassword');
+
+    formLogin.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const person = {
+            email: emailLogin.value,
+            passLogin: passLogin.value
+        };
+
+        await fetch(
+            "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select password from hHp8vjTTDHUSCcBq where email='" +
+                person.email +
+                "'"
+        ).then(res => {
+            if (res.status === 200) {
+                res.json()
+                    .then(data => {
+                        const yourData = data;
+                        if (yourData.data.length == 0) {
+                            alert('There is no user with this email');
+                        } else {
+                            (async function () {
+                                if (
+                                    yourData.data[0].password ==
+                                    (await digestPass(person.passLogin))
+                                ) {
+                                    alert('Authorisation completed');
+                                    document.location.href = '/personal-cabinet.html'
+                                } else {
+                                    alert('Wrong password');
+                                }
+                            })();
+                        }
+                    })
+                    .catch(err => console.log(err));
+            } else {
+                console.log(res.status);
+            }
+        });
+    });
+    formReg.addEventListener('submit', async e => {
+        e.preventDefault();
+
+        const person = {
+            data: {
+                email: emailReg.value
+            }
+        };
+
+        (async function () {
+            person.data.password = await digestPass(passReg.value);
+        })();
+        roleReg.forEach(elem => {
+            elem.checked ? (person.data.role = elem.id) : null;
+        });
+
+        await fetch(
+            "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select * from hHp8vjTTDHUSCcBq where email='" +
+                person.data.email +
+                "'"
+        ).then(res => {
+            if (res.status === 200) {
+                res.json()
+                    .then(data => {
+                        const yourData = data;
+                        if (yourData.data.length == 0) {
+                            fetch('https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/', {
+                                method: 'POST',
+                                body: JSON.stringify(person)
+                            }).then(res => {
+                                if (res.status === 201) {
+                                    switchAuth(false);
+                                    switchForm(false);
+                                    alert('Registration successful, log in to your account');
+                                } else {
+                                    alert('No luck registering, try again');
+                                }
+                            });
+                        } else {
+                            alert('Such mail already exists');
+                        }
+                    })
+                    .catch(err => console.log(err));
+            } else {
+                console.log(res.status);
+            }
+        });
+    });
+
+    async function digestPass(password) {
+        const algo = 'SHA-256';
+
+        // encode as (utf-8) Uint8Array
+        const msgUint8 = new TextEncoder().encode(password);
+        // hash the message
+        const hashBuffer = await crypto.subtle.digest(algo, msgUint8);
+        // convert buffer to byte array
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        // convert bytes to hex string
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+        return hashHex;
+    }
 });
