@@ -138,6 +138,15 @@
         margin-left: 18px;
     }
 
+    &__hide-text {
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #fcffff;
+        display: none;
+    }
+
     &__show-more {
         font-family: 'Proxima Nova';
         font-weight: 700;
@@ -279,6 +288,11 @@
                 display: block;
             }
         }
+        &__hide-text {
+            display: inline;
+            font-size: 14px;
+            line-height: 18px;
+        }
         &__show-more {
             display: none;
         }
@@ -319,7 +333,7 @@
         }
         &__body {
             &-wrapper {
-                gap: 12px;
+                gap: 9px;
             }
         }
     }
