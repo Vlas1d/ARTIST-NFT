@@ -14,7 +14,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="header__logo">
+        <a href="@html/index.html" class="header__logo">
             <img src="@icons/logo.svg" alt="logo">
         </a>
         <a href="#" class="header__exit">
@@ -52,6 +52,11 @@
                         class="sidemenu__img-hide">
                     Orders
                 </li>
+                <div class="sidemenu__list-item">
+                    <img src="@icons/personal-cabinet/statistics.svg" alt="bag" class="sidemenu__img">
+                    <img src="@icons/personal-cabinet/statistics-color.svg" alt="bag" class="sidemenu__img-hide">
+                    Statistics
+                </div>
                 <li class="sidemenu__list-item">
                     <a href="#" class="sidemenu__exit">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,16 +74,21 @@
     <section class="container">
         <aside class="aside">
             <div class="aside__tabs">
-                <div class="aside__tab">
+                <div class="aside__tab aside__tab_active">
                     <img src="@icons/personal-cabinet/messages.svg" alt="messages" class="aside__img">
                     <img src="@icons/personal-cabinet/messages-color.svg" alt="messages"
                         class="aside__img-hide aside__img-hide_active">
                     Messages
                 </div>
-                <div class="aside__tab">
+                <div class="aside__tab aside_client">
                     <img src="@icons/personal-cabinet/bag.svg" alt="bag" class="aside__img">
                     <img src="@icons/personal-cabinet/bag-color.svg" alt="bag" class="aside__img-hide">
                     Orders
+                </div>
+                <div class="aside__tab aside_worker">
+                    <img src="@icons/personal-cabinet/statistics.svg" alt="bag" class="aside__img">
+                    <img src="@icons/personal-cabinet/statistics-color.svg" alt="bag" class="aside__img-hide">
+                    Statistics
                 </div>
             </div>
             <div class="aside__copyright">
@@ -196,6 +206,9 @@
                 </div>
                 <div class="main__tab">
                     @@include('html/personal-cabinet/orders.html', {})
+                </div>
+                <div class="main__tab">
+                    @@include('html/personal-cabinet/statistics.html', {})
                 </div>
             </div>
         </main>
