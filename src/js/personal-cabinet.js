@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? elem.classList.remove('aside__img-hide_active')
                 : null;
         });
+        asideTab.forEach(elem => {
+            elem.classList.contains('aside__tab_active')
+                ? elem.classList.remove('aside__tab_active')
+                : null;
+        });
         sidemenuTabImg.forEach(elem => {
             elem.classList.contains('sidemenu__img-hide_active')
                 ? elem.classList.remove('sidemenu__img-hide_active')
                 : null;
-        })
+        });
     };
     const removeActiveClassFromMainTab = () => {
         mainTab.forEach(elem => {
@@ -29,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
         removeActiveClassFromTabImg();
         removeActiveClassFromMainTab();
     };
-    const addActiveClassForTab = (index) => {
+    const addActiveClassForTab = index => {
         asideTabImg[index].classList.add('aside__img-hide_active');
+        asideTab[index].classList.add('aside__tab_active');
         sidemenuTabImg[index].classList.add('sidemenu__img-hide_active');
-    }
+    };
 
     asideTab.forEach((elem, index) => {
         elem.addEventListener('click', () => {
@@ -47,9 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
             removeActiveClass();
             addActiveClassForTab(index);
             mainTab[index].classList.add('main__tab_active');
-            sidemenu.classList.remove('sidemenu_active')
+            sidemenu.classList.remove('sidemenu_active');
         });
-    })
+    });
 
     const chat = document.querySelector('.chat');
     const chatList = document.querySelector('.chat-list');
@@ -81,10 +87,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     burger.addEventListener('click', () => {
         sidemenu.classList.toggle('sidemenu_active');
-    })
-
-    const swiper = new Swiper('.orders__body', {
-        direction: 'vertical',
-        slidesPerView: 5
-    })
+    });
 });

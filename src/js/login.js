@@ -46,8 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // TODO Сделать регистрацию с занисением в excel
-
     const formLogin = document.querySelector('.form__login');
     const formReg = document.querySelector('.form__registration');
 
@@ -160,4 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return hashHex;
     }
+
+    // TODO после авторизации добавить данные в куки
 });

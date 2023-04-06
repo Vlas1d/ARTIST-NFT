@@ -180,7 +180,7 @@
         display: flex;
         align-items: center;
         &-wrapper {
-            margin-left: 22px;
+            margin-left: 12px;
             display: flex;
         }
     }
@@ -511,6 +511,9 @@
         display: none;
         padding: 18px 15px 28px;
         &__info {
+            &-wrapper {
+                margin-left: 22px;
+            }
         }
         &__msg-img {
             width: 248px;
