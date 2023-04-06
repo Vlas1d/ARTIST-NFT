@@ -52,11 +52,16 @@
                         class="sidemenu__img-hide">
                     Orders
                 </li>
-                <div class="sidemenu__list-item">
+                <li class="sidemenu__list-item">
                     <img src="@icons/personal-cabinet/statistics.svg" alt="bag" class="sidemenu__img">
                     <img src="@icons/personal-cabinet/statistics-color.svg" alt="bag" class="sidemenu__img-hide">
                     Statistics
-                </div>
+                </li>
+                <li class="sidemenu__list-item">
+                    <img src="@icons/personal-cabinet/activity.svg" alt="bag" class="sidemenu__img">
+                    <img src="@icons/personal-cabinet/activity-color.svg" alt="bag" class="sidemenu__img-hide">
+                    NFT Orders
+                </li>
                 <li class="sidemenu__list-item">
                     <a href="#" class="sidemenu__exit">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,6 +94,11 @@
                     <img src="@icons/personal-cabinet/statistics.svg" alt="bag" class="aside__img">
                     <img src="@icons/personal-cabinet/statistics-color.svg" alt="bag" class="aside__img-hide">
                     Statistics
+                </div>
+                <div class="aside__tab aside_worker">
+                    <img src="@icons/personal-cabinet/activity.svg" alt="bag" class="aside__img">
+                    <img src="@icons/personal-cabinet/activity-color.svg" alt="bag" class="aside__img-hide">
+                    NFT Orders
                 </div>
             </div>
             <div class="aside__copyright">
@@ -209,6 +219,9 @@
                 </div>
                 <div class="main__tab">
                     @@include('html/personal-cabinet/statistics.html', {})
+                </div>
+                <div class="main__tab">
+                    @@include('html/personal-cabinet/nft-orders.html', {})
                 </div>
             </div>
         </main>
