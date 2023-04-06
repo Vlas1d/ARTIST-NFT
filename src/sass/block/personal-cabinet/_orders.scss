@@ -6,6 +6,9 @@
     justify-content: center;
 
     &__table {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 63px 1fr;
     }
 
     &__head {
@@ -50,7 +53,7 @@
     }
 
     &__body {
-        height: 773px;
+        height: 100%;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             display: none;
@@ -329,10 +332,31 @@
 @media (max-width: 968px) {
     .orders {
         &__table {
-            width: 345px;
         }
         &__body {
             &-wrapper {
+                justify-content: center;
+                gap: 9px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .orders {
+        &__body{
+            &-wrapper {
+                
+            }
+        }
+    }
+}
+
+@media (max-width: 731px) {
+    .orders {
+        &__body {
+            &-wrapper {
+                justify-content: center;
                 gap: 9px;
             }
         }
