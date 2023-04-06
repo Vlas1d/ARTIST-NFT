@@ -2,9 +2,12 @@
     padding: 32px 22px 0 23px;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 155px 1fr;
+    justify-items: center;
+    /* flex-direction: column;
+    align-items: center; */
 
     &__title {
         display: none;
@@ -115,6 +118,7 @@
 
     &__table {
         width: 990px;
+        height: calc(100%);
         overflow-y: scroll;
         &::-webkit-scrollbar {
             display: none;
@@ -122,12 +126,12 @@
         &-wrapper {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 16px;
         }
     }
 
     &__item {
-        padding: 23px 28px 31px 23px;
+        padding: 24px 28px 27px 23px;
         display: flex;
         background: #1d1f21;
         border-radius: 14px;
@@ -215,6 +219,7 @@
         line-height: 18px;
         color: #86a8ff;
         text-decoration-line: underline;
+        cursor: pointer;
     }
 
     &__info1,
@@ -245,9 +250,11 @@
 }
 
 @media (max-width: 1279px) {
-    /* TODO сделать правильное отображение при 768px __title */
     .statistics {
         padding: 18px 15px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &__stats {
             padding: 0;
             width: auto;
@@ -278,6 +285,12 @@
             font-size: 12px;
             line-height: 21px;
         }
+        &__order-subtitle {
+            display: none;
+        }
+        &__order-subtitle_hide {
+            display: block;
+        }
         &__withdraw {
             margin-top: 12px;
             padding-top: 24px;
@@ -305,7 +318,7 @@
         &__table {
             padding-bottom: 10px;
             width: calc(345px * 2 + 12px);
-            height: calc(100% - 288px);
+            height: calc(100% - 258px);
             justify-content: center;
             &-wrapper {
                 gap: 12px;
@@ -395,10 +408,15 @@
 
 @media (max-width: 768px) {
     .statistics {
+        display: grid;
+        grid-template-rows: 288px 1fr;
         &__title {
             margin-bottom: 9px;
             width: 100%;
             display: block;
+        }
+        &__stats {
+            align-items: center;
         }
         &__earn,
         &__order {
@@ -406,6 +424,10 @@
         }
         &__table {
             width: calc(345px * 2 + 12px);
+            height: 100%;
+            &-wrapper {
+                align-items: flex-start;
+            }
         }
     }
 }
