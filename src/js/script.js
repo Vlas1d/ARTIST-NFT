@@ -21,4 +21,57 @@ $('.burger-button').on('click', function () {
     $('.mobile-menu').toggleClass('opened');
 });
 
-//------------------------------------------------------------------------------------------------------
+//----------------------HEADER--------------------------------------------------------------------------
+
+const header_ = document.querySelector("header"); //Для елемента header
+const isLogin = document.querySelector(".isLogin"); //Для елемента header
+const isPremium = document.querySelector(".isPremium");
+
+const premiumButton = document.querySelector("header .premium-button");
+const accountButton = document.querySelector("header .account-button");
+const nfts = document.querySelector(".lock-category");
+
+function premiumChanges() {
+    if (header_.classList.contains('isLogin') && header_.classList.contains('isPremium')) {
+        premiumButton.classList.add("button_opacity");
+        premiumButton.classList.remove("button_gradient");
+
+        nfts.classList.add("active");
+        nfts.querySelector("span").classList.add("gradient-text");
+    }
+    else {
+        premiumButton.classList.add("button_gradient");
+        premiumButton.classList.remove("button_opacity");
+
+        nfts.classList.remove("active");
+        nfts.querySelector("span").classList.remove("gradient-text");
+    }
+}
+
+function loginChanges() {
+    if (header_.classList.contains('isLogin')) {
+        accountButton.querySelector('span').innerText = "Personal cabinet";
+        accountButton.setAttribute('href', 'personal-cabinet.html');
+    }
+    else {
+        accountButton.querySelector('span').innerText = "Authorization";
+        accountButton.setAttribute('href', 'authorization.html');
+    }
+}
+
+loginChanges();
+premiumChanges();
+
+const observer = new MutationObserver(function (mutations) {
+    // Перевіряємо, чи є зміни у href атрибуті елемента
+    mutations.forEach(function (mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target === header_) {
+            loginChanges();
+            premiumChanges();
+        }
+    });
+});
+
+// Починаємо спостереження за змінами у DOM-структурі
+observer.observe(header_, { attributes: true });
+//-------------------------------------------------------------------------------------------------------
