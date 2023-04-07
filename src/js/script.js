@@ -21,4 +21,20 @@ $('.burger-button').on('click', function () {
     $('.mobile-menu').toggleClass('opened');
 });
 
-//------------------------------------------------------------------------------------------------------
+//----------------------HEADER--------------------------------------------------------------------------
+
+const isLogin = document.querySelector(".isLogin"); //Для елемента header
+const isPremium = document.querySelector(".isPremium");
+
+const premiumButton = document.querySelector("header .button_gradient");
+const nfts = document.querySelector(".lock-category");
+
+if (isPremium != null && isLogin != null) {
+    premiumButton.classList.add("button_opacity");
+    premiumButton.classList.remove("button_gradient");
+
+    nfts.classList.add("active");
+    nfts.querySelector("span").classList.add("gradient-text");
+}
+
+//-------------------------------------------------------------------------------------------------------
