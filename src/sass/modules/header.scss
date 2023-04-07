@@ -14,9 +14,6 @@
     z-index: 999;
 
     &.isLogin {
-        .authorization-button {
-            display: none;
-        }
         .header__desktop {
             padding-right: 35px;
         }
