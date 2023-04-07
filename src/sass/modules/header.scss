@@ -21,12 +21,16 @@
             padding-right: 35px;
         }
     }
-    &.isPremium {
+    &.isLogin.isPremium {
         .lock-category {
+            pointer-events: all;
             img {
                 display: none;
             }
         }
+    }
+    .lock-category {
+        pointer-events: none;
     }
     .lock-category.active {
         padding: 8px 12px 7px;
