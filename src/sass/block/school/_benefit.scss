@@ -1,0 +1,74 @@
+.benefit {
+    padding-bottom: 73px;
+    
+    &__title {
+        background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #fcffff;
+        text-align: center;
+    }
+
+    &__group {
+        margin-top: 32px;
+        padding-left: 161px;
+        padding-right: 152px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 18px 17px 0 19px;
+        width: 255px;
+        height: 254px;
+        background: #212426;
+        border-radius: 12px;
+    }
+
+    &__item-img {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+            94.78deg,
+            rgba(104, 201, 255, 0.1) 9.27%,
+            rgba(209, 181, 255, 0.1) 84.06%
+        );
+        border-radius: 12px;
+    }
+
+    &__item-title {
+        margin-top: 9px;
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #fcffff;
+    }
+
+    &__item-subtitle {
+        margin-top: 5px;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #FCFFFF;
+    }
+}
