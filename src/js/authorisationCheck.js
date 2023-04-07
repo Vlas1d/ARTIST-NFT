@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', async () => {
+/* document.addEventListener('DOMContentLoaded', async () => {
     if(getCookie('isLogin')) {
         console.log(true);
         console.log(getCookie('email'));
@@ -26,4 +26,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
         console.log(false);
     }
-})
+}) */
