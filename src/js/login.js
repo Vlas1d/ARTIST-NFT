@@ -56,6 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailReg = document.querySelector('#registrationEmail');
     const passReg = document.querySelector('#registrationPassword');
 
+    const goToPersonalCab = (cabinet) => {
+        switch (cabinet) {
+            case 'admin':
+                document.location.href = '/personal-cabinet-owner.html'
+                break;
+            case 'customer':
+                document.location.href = '/personal-cabinet-client.html'
+                break;
+            case 'artist':
+                document.location.href = '/personal-cabinet-worker.html'
+                break;
+            default:
+                break;
+        }
+    }
+
     formLogin.addEventListener('submit', async e => {
         e.preventDefault();
 
@@ -65,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         await fetch(
-            "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select password from hHp8vjTTDHUSCcBq where email='" +
+            "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select * from hHp8vjTTDHUSCcBq where email='" +
                 person.email +
                 "'"
         ).then(res => {
@@ -82,7 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                     (await digestPass(person.passLogin))
                                 ) {
                                     alert('Authorisation completed');
-                                    document.location.href = '/personal-cabinet.html'
+                                    setCookie('isLogin', 'true');
+                                    setCookie('email', yourData.data[0].email);
+                                    goToPersonalCab(yourData.data[0].role);
                                 } else {
                                     alert('Wrong password');
                                 }
@@ -158,6 +176,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return hashHex;
     }
-
-    // TODO после авторизации добавить данные в куки
 });

@@ -1,0 +1,53 @@
+.fees {
+    &__title {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #fcffff;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 0 auto;
+        width: 415px;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: center;
+    }
+
+    &__group {
+    }
+
+    &__item {
+    }
+
+    &__bg-text {
+    }
+
+    &__term {
+    }
+
+    &__term-title {
+    }
+
+    &__term-subtitle {
+    }
+
+    &__list {
+    }
+
+    &__list-item {
+    }
+
+    &__diamond {
+        opacity: 0;
+        transition: all 0.2s;
+
+        &_active {
+            opacity: 1;
+        }
+    }
+}
