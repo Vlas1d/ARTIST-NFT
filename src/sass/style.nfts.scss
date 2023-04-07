@@ -1,0 +1,234 @@
+@import "modules/nft-card";
+
+@mixin decor-box {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+    & > * {
+        position: absolute;
+    }
+}
+
+.nfts-head {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 48px 0px;
+
+    text-align: center;
+
+    @media (max-width: 620px) {
+        padding: 26px 0px 42px;
+
+        h1 {
+            max-width: 320px;
+        }
+        p {
+            max-width: 300px;
+        }
+    }
+
+    h1 {
+        max-width: 570px;
+        width: 100%;
+
+        margin-bottom: 16px;
+    }
+    p {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    &__decor {
+        @include decor-box();
+
+        .decor-1 { bottom: 79px; right: 24.5%; width: 25px; height: 25px; }
+        .decor-2 { top: 49px; left: 27.1%; width: 46px; height: 62px; }
+        .decor-3 { top: 29%; left: -38px; }
+        .decor-4 { top: 29%; right: -26px; }
+
+        @media (max-width: 1100px) {
+            .decor-2 {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.nfts {
+    max-width: 1150px;
+    width: 100%;
+
+    padding: 2px 20px 0px;
+    margin: 0px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 28px;
+
+    @media (max-width: 620px) {
+        padding: 2px 15px 0px;
+        column-gap: 19px;
+        row-gap: 16px;
+
+        & > *:nth-child(-n + 2) {
+            display: none;
+        }
+    }
+
+    .nft-card {
+        @media (max-width: 620px) {
+            padding-top: 0px !important;
+            padding-bottom: 10px !important;
+
+            & > * {
+                padding: 0px 11px;
+            }
+
+            &__head {
+                font-size: 12px;
+                line-height: 20px;
+                margin-top: 8px;
+            }
+            &__image {
+                max-width: 100%;
+                width: 100%;
+                aspect-ratio: 1/1;
+                height: auto;
+            }
+            &__text {
+                margin-top: -6px;
+                padding-bottom: 7px;
+                span {
+                    font-size: 13px;
+                    line-height: 26px;
+                }
+                p {
+                    font-size: 10px;
+                    line-height: 16px;
+                    margin-top: -3px;
+                }
+            }
+            &__price {
+                flex-direction: column;
+                align-items: flex-start;
+
+                span {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                .button {
+                    width: 100%;
+                    height: 34px;
+                    border-radius: 8px;
+                    margin-top: 7px;
+
+                    span {
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            picture {
+                img {
+                    @media (max-width: 620px) {
+                        width: 119px;
+                        height: 150px;
+                        margin-bottom: -8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//---------------------------pages---------------------------------------------
+
+.pages {
+    max-width: 482px;
+    width: 100%;
+    margin: 53px auto 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 620px) {
+        padding: 0px 15px;
+        margin: 29px auto 30px;
+    }
+
+    &__prev, &__num, &__next {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #fff;
+        background: #212426;
+
+        @media (max-width: 620px) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__prev, &__next {
+        border: 2px solid #525960;
+
+        &:hover {
+            border: 2px solid #68C9FF;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__nums {
+        display: flex;
+        & > *:not(:last-child) {
+            margin-right: 9px;
+        }
+    }
+
+    &__num {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        @media (max-width: 620px) {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 10px #68C9FF;
+        }
+
+        &.active {
+            color: #000;
+            background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            pointer-events: none;
+        }
+    }
+}

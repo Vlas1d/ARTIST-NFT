@@ -88,4 +88,16 @@ document.addEventListener('DOMContentLoaded', () => {
     burger.addEventListener('click', () => {
         sidemenu.classList.toggle('sidemenu_active');
     });
+
+    const btnExit = [document.querySelector('.header__exit'), document.querySelector('.sidemenu__exit'), document.querySelector('.aside__exit')];
+
+    btnExit.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            e.preventDefault();
+            deleteCookie('isLogin');
+            deleteCookie('email');
+            sessionStorage.removeItem('user');
+            document.location.href = '/authorization.html';
+        })
+    })
 });
