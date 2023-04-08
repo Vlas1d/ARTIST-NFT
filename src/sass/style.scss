@@ -37,6 +37,7 @@ html, body {
 main {
     position: relative;
     padding-top: 64px;
+    min-height: calc(100vh - 108px);
 }
 body {
     overflow-x: hidden;
@@ -99,4 +100,8 @@ h2 {
         font-size: 26px;
         line-height: 34px;
     }
+}
+h4 {
+    font-size: 26px;
+    line-height: 34px;
 }

@@ -78,7 +78,7 @@
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 30px;
-    row-gap: 28px;
+    row-gap: 25px;
 
     @media (max-width: 620px) {
         padding: 2px 15px 0px;
@@ -162,14 +162,14 @@
 .pages {
     max-width: 482px;
     width: 100%;
-    margin: 53px auto 30px;
+    margin: 53px auto 64px;
 
     display: flex;
     justify-content: space-between;
 
     @media (max-width: 620px) {
         padding: 0px 15px;
-        margin: 29px auto 30px;
+        margin: 29px auto 56px;
     }
 
     &__prev, &__num, &__next {
