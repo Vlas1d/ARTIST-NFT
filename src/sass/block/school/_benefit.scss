@@ -1,7 +1,8 @@
 .benefit {
     padding-bottom: 73px;
-    
+
     &__title {
+        padding-right: 15px;
         background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -16,6 +17,7 @@
     }
 
     &__subtitle {
+        padding-right: 17px;
         font-family: 'Proxima Nova';
         font-weight: 700;
         font-size: 36px;
@@ -27,9 +29,15 @@
     &__group {
         margin-top: 32px;
         padding-left: 161px;
-        padding-right: 152px;
+        padding-right: 169px;
         display: flex;
         justify-content: space-between;
+        @media (min-width: 1441px) {
+            padding: 0;
+            margin: 0 auto;
+            margin-top: 32px;
+            width: 1110px;
+        }
     }
 
     &__item {
@@ -69,6 +77,71 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 28px;
-        color: #FCFFFF;
+        color: #fcffff;
+    }
+}
+
+@media (max-width: 1356px) {
+    .benefit {
+        &__group {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .benefit {
+        &__group {
+            padding-left: 25px;
+            padding-right: 25px;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .benefit {
+        padding: 0 15px 123px;
+        &__title {
+            font-size: 14px;
+            line-height: 26px;
+            text-align: left;
+        }
+        &__subtitle {
+            padding: 0;
+            width: 225px;
+            font-size: 26px;
+            line-height: 34px;
+            text-align: left;
+        }
+        &__group {
+            margin-top: 28px;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px 11px;
+        }
+        &__item {
+            padding: 10px 11px 14px 10px;
+            width: 167px;
+            height: 187px;
+        }
+        &__item-img {
+            width: 36px;
+            height: 36px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        &__item-title {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__item-subtitle {
+            margin-top: 0;
+            font-size: 12px;
+            line-height: 20px;
+        }
     }
 }

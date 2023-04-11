@@ -17,8 +17,20 @@ testWebP(function (support) {
 
 //--------------------MENU-BURGER-----------------------------------------------------------------------
 
-$('.burger-button').on('click', function () {
-    $('.mobile-menu').toggleClass('opened');
+//$('.burger-button').on('click', function () {
+//    $('.mobile-menu').toggleClass('opened');
+//});
+
+const burger = document.querySelector(".burger-button");
+const mobMenu = document.querySelector(".mobile-menu");
+
+burger.addEventListener('click', function () {
+    if (mobMenu.classList.contains('opened')) {
+        mobMenu.classList.remove('opened');
+    }
+    else {
+        mobMenu.classList.add('opened');
+    }
 });
 
 //----------------------HEADER--------------------------------------------------------------------------
