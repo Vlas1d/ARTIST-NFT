@@ -22,8 +22,9 @@
     }
 
     &__navigation {
+        margin: 0 auto;
         padding: 7px 6px;
-        width: 100%;
+        width: 345px;
         display: none;
         justify-content: space-between;
         background: #212426;
@@ -320,7 +321,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 1200px) {
     .fees {
         padding-left: 15px;
         padding-right: 15px;
@@ -348,6 +349,8 @@
 
         &__group {
             margin-top: 20px;
+            width: 100%;
+            justify-content: center;
         }
 
         &__item {

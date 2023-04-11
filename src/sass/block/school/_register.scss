@@ -17,18 +17,19 @@
 
     &__tooken {
         margin-top: 7px;
-        width: 191px;
+        padding: 5px 18px 5px 23px;
+        width: 192px;
         height: 37px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         border-radius: 12px;
         font-family: 'Proxima Nova';
-        font-weight: 800;
+        font-weight: 400;
         font-size: 16px;
         line-height: 28px;
         color: #1d1f21;
+        span {
+            font-weight: 800;
+        }
     }
 
     &__form {
@@ -81,8 +82,9 @@
     }
 
     &__select {
+        margin: 0 auto;
         margin-top: 7px;
-        width: 408px;
+        width: min(100%, 408px);
         display: flex;
         justify-content: space-between;
     }
@@ -108,9 +110,9 @@
             background-clip: text;
         }
         &_active {
-            background: linear-gradient(94.78deg, #68C9FF 9.27%, #D1B5FF 84.06%);
+            background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
             span {
-                -webkit-text-fill-color: #1D1F21;
+                -webkit-text-fill-color: #1d1f21;
             }
         }
     }
@@ -175,23 +177,79 @@
         position: absolute;
         top: 240px;
         left: 161px;
+        z-index: -1;
     }
 
     &__diamond2 {
         position: absolute;
         top: 320px;
         left: -148px;
+        z-index: -1;
     }
 
     &__diamond3 {
         position: absolute;
         top: 645px;
         left: 230px;
+        z-index: -1;
     }
 
     &__cub {
         position: absolute;
         top: 145px;
         right: -266px;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 620px) {
+    .register {
+        padding: 104px 15px 30px;
+        align-items: flex-start;
+        &__title {
+            padding-left: 0;
+            font-size: 26px;
+            line-height: 34px;
+        }
+        &__tooken {
+            height: 38px;
+        }
+        &__form {
+            width: 100%;
+        }
+        &__select-item {
+            width: 109px;
+            height: 50px;
+        }
+        &__btn {
+            margin-top: 19px;
+            width: 100%;
+            height: 56px;
+        }
+        &__checkbox {
+            margin-top: 17px;
+            label {
+                padding-left: 30px;
+            }
+        }
+        &__diamond1 {
+            left: auto;
+            right: -68px;
+            top: -10px;
+        }
+        &__diamond2 {
+            display: none;
+        }
+        &__diamond3 {
+            left: -78px;
+            top: -36px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__cub {
+            display: none;
+        }
     }
 }
