@@ -32,3 +32,22 @@ const mobileTitle = document.querySelector('.about-lot h2');
 if (window.innerWidth < 768) {
     mobileTitle.innerText = "Title of picture or NFT";
 }
+
+//---------------------------------SLIDER------------------------------------------------------
+
+const sliderBox = document.querySelector('.auction-slider__box');
+const sliderContent = document.querySelector('.auction-slider__slide');
+const sliderProgressbar = document.querySelector('.auction-slider__progress span');
+
+var sliderProgress = 0;
+
+function sliderProgressCalc() {
+    sliderProgress = sliderBox.offsetHeight + sliderBox.getBoundingClientRect().top - sliderContent.getBoundingClientRect().top;
+    sliderProgressbar.style.width = `${(sliderProgressbar.closest('.auction-slider__progress').offsetWidth * sliderProgress) / sliderContent.offsetHeight}px`;
+}
+
+sliderProgressCalc()
+
+sliderBox.addEventListener('scroll', function () {
+    sliderProgressCalc()
+});
