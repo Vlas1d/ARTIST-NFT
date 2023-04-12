@@ -1,10 +1,10 @@
 .promo {
-    padding: 238px 167px 232px;
+    padding: 163px 164px 102px;
     position: relative;
     overflow: hidden;
 
     &__title {
-        width: 432px;
+        width: 495px;
         font-family: 'Proxima Nova';
         font-weight: 700;
         font-size: 64px;
@@ -14,7 +14,7 @@
 
     &__subtitle {
         margin-top: 16px;
-        width: 271px;
+        width: 540px;
         font-family: 'Proxima Nova';
         font-weight: 400;
         font-size: 16px;
@@ -24,11 +24,12 @@
 
     &__link {
         margin-top: 40px;
+        padding: 18px 22px 19px;
         width: 209px;
         height: 64px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         border-radius: 16px;
         transition: 0.15s ease 0s;
 
@@ -51,26 +52,26 @@
         -webkit-text-stroke: 1px #4a4c4d;
     }
     &__back-text1 {
-        top: 143px;
-        left: -103px;
+        top: 104px;
+        left: -105px;
     }
     &__back-text2 {
         bottom: 40px;
-        right: 384px;
+        right: 440px;
     }
     &__img {
         position: absolute;
-        top: 163px;
-        right: 188px;
+        top: 157px;
+        right: 221px;
         z-index: 1;
     }
     &__img-bg {
         position: absolute;
-        top: 87px;
-        right: 229px;
+        top: 117px;
+        right: 188px;
         z-index: 1;
-        width: 561px;
-        height: 561px;
+        width: 450px;
+        height: 451px;
     }
     &__img-bg2 {
         position: absolute;
@@ -85,8 +86,19 @@
         right: 106px;
     }
     &__star2 {
-        top: 439px;
-        right: 749px;
+        top: 503px;
+        right: 701px;
+    }
+
+    &__circle {
+        position: absolute;
+        left: 630px;
+        top: 551px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid #fcffff;
+        opacity: 0.4;
     }
 }
 
@@ -125,9 +137,8 @@
         &__img {
             top: 50%;
             transform: translateY(-50%);
-            right: -33px;
-            width: 425px;
-            height: 268px;
+            width: 279px;
+            height: 279px;
             img {
                 width: 100%;
                 height: 100%;
@@ -146,12 +157,20 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .promo {
+        &__subtitle {
+            width: 345px;
+        }
+    }
+}
+
 @media (max-width: 920px) {
     .promo {
         padding: 131px 67px 249px;
 
         &__title {
-            width: 254px;
+            width: 296px;
             font-size: 36px;
             line-height: 40px;
         }
@@ -163,11 +182,17 @@
         }
 
         &__link {
-            margin-top: 24px;
+            margin-top: 32px;
+            padding: 17px 27px 19px;
             width: 193px;
             height: 52px;
             font-size: 15px;
             line-height: 26px;
+            border-radius: 12px;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
         }
 
         &__back-text1 {
@@ -188,24 +213,24 @@
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 720px) {
     .promo {
-        padding: 131px 15px 474px;
+        padding: 126px 15px 425px;
 
         &__back-text1 {
             top: 70px;
-            left: -147px;
-            width: 542px;
+            left: auto;
+            right: -106px;
+            width: 400px;
             height: 61px;
             font-size: 50px;
             line-height: 61px;
         }
 
         &__back-text2 {
-            top: 748px;
-            left: auto;
-            right: -81px;
-            width: 430px;
+            top: 585px;
+            left: -79px;
+            width: 335px;
             height: 61px;
             font-size: 50px;
             line-height: 61px;
@@ -217,16 +242,16 @@
 
         &__img-bg2 {
             display: block;
-            top: 397px;
-            right: 10px;
+            top: 617px;
+            right: 15px;
             transform: translate(0);
         }
 
         &__img {
-            top: 444px;
-            right: -33px;
-            width: 425px;
-            height: 268px;
+            top: 643px;
+            right: 81px;
+            width: 279px;
+            height: 279px;
             transform: translate(0);
             img {
                 width: 100%;
@@ -235,13 +260,35 @@
         }
 
         &__star1 {
-            top: 365px;
-            right: 3px;
+            width: 30px;
+            height: 41px;
+            left: 0px;
+            top: 432px;
+            transform: rotate(16.11deg);
+            z-index: -1;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         &__star2 {
-            top: 578px;
-            left: -5px;
+            height: 48px;
+            width: 36px;
+            top: 425px;
+            left: auto;
+            right: 37px;
+            transform: rotate(-11.82deg);
+            z-index: -1;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__circle {
+            left: 105px;
+            top: 462px;
         }
     }
 }

@@ -1,8 +1,6 @@
 .benefit {
-    padding-bottom: 73px;
 
     &__title {
-        padding-right: 15px;
         background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -17,7 +15,6 @@
     }
 
     &__subtitle {
-        padding-right: 17px;
         font-family: 'Proxima Nova';
         font-weight: 700;
         font-size: 36px;
@@ -27,17 +24,11 @@
     }
 
     &__group {
+        margin: 0 auto;
         margin-top: 32px;
-        padding-left: 161px;
-        padding-right: 169px;
+        width: 1110px;
         display: flex;
         justify-content: space-between;
-        @media (min-width: 1441px) {
-            padding: 0;
-            margin: 0 auto;
-            margin-top: 32px;
-            width: 1110px;
-        }
     }
 
     &__item {
@@ -84,6 +75,7 @@
 @media (max-width: 1356px) {
     .benefit {
         &__group {
+            width: 100%;
             padding-left: 50px;
             padding-right: 50px;
         }
@@ -101,7 +93,7 @@
 
 @media (max-width: 1024px) {
     .benefit {
-        padding: 0 15px 123px;
+        padding: 0 15px 0;
         &__title {
             font-size: 14px;
             line-height: 26px;
