@@ -1,0 +1,108 @@
+.promo {
+    padding-top: 126px;
+    position: relative;
+
+    &__title {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 65px;
+        color: #fcffff;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin: 0 auto;
+        margin-top: 16px;
+        width: 415px;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #fcffff;
+        text-align: center;
+    }
+
+    &__back-text1,
+    &__back-text2 {
+        position: absolute;
+        top: 150px;
+        z-index: -1;
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 97px;
+        -webkit-text-fill-color: rgba(0, 0, 0, 0);
+        -webkit-text-stroke: 1px #4a4c4d;
+    }
+
+    &__back-text1 {
+        left: -38px;
+    }
+    &__back-text2 {
+        right: -27px;
+    }
+
+    &__star {
+        position: absolute;
+        z-index: -1;
+        left: 390px;
+        top: 113px;
+    }
+
+    &__circle {
+        position: absolute;
+        top: 258px;
+        right: 352px;
+        width: 25px;
+        height: 25px;
+        opacity: 0.4;
+        border-radius: 50%;
+        border: 1px solid #fcffff;
+    }
+}
+
+@media (max-width: 1420px) {
+    .promo {
+        &__star {
+            width: 26px;
+            height: 36px;
+            top: 64px;
+            right: -7px;
+            left: auto;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .promo {
+        &__back-text1,
+        &__back-text2 {
+            display: none;
+        }
+
+        &__circle {
+            left: -10px;
+            top: 138px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .promo {
+        padding-top: 90px;
+        &__title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        &__subtitle {
+            width: 322px;
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+}
