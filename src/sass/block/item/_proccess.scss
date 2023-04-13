@@ -33,8 +33,8 @@
     }
 
     &__play {
-        width: 64px;
-        height: 64px;
+        width: 56px;
+        height: 56px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,8 +47,8 @@
     }
 
     &__bar {
-        padding-left: 20px;
-        padding-right: 10px;
+        padding-left: 10px;
+        padding-right: 20px;
         width: calc(1014px * 100% / 1045px);
         height: 48px;
         display: flex;
@@ -83,6 +83,7 @@
     }
 
     &__premium {
+        padding-right: 50px;
         display: flex;
         align-items: center;
         font-family: 'Proxima Nova';
@@ -122,6 +123,7 @@
     justify-content: center;
     border-radius: 12px;
     backdrop-filter: blur(11px) brightness(50%);
+    display: none;
 
     &__title {
         margin-top: 14px;
@@ -202,6 +204,25 @@
     .proccess {
         &__video {
             height: 242px;
+        }
+        &__play {
+            width: 32px;
+            height: 32px;
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &__bar {
+            height: 44px;
+            bottom: 9px;
+        }
+        &__premium {
+            display: none;
+        }
+        &__date {
+            font-size: 12px;
+            line-height: 20px;
         }
     }
 }
