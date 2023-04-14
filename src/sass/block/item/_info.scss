@@ -1,0 +1,194 @@
+.info {
+    margin-top: 24px;
+    padding-left: 165px;
+    width: 1045px;
+
+    &__wrapper {
+        width: 1045px;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    &__img {
+    }
+
+    &__container {
+        padding-top: 10px;
+    }
+
+    &__subtitle {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 0.1em;
+        background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    &__title {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 50px;
+        color: #fcffff;
+    }
+
+    &__descr1,
+    &__descr2 {
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #fcffff;
+    }
+    &__descr2 {
+        margin-top: 30px;
+    }
+
+    &__buy {
+        margin-top: 24px;
+        padding: 16px 14px 27px 18px;
+        background: #212426;
+        border-radius: 12px;
+    }
+
+    &__buy-section {
+        padding-left: 14px;
+        padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #2d333c;
+    }
+
+    &__price {
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 34px;
+        color: #fcffff;
+    }
+
+    &__btn {
+        width: 209px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        font-family: 'Proxima Nova';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: #1d1f21;
+        svg {
+            margin-right: 8px;
+        }
+    }
+
+    &__buy-descr {
+        margin-top: 22px;
+        width: 426px;
+        font-family: 'Proxima Nova';
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #c8d2dc;
+    }
+}
+
+@media (min-width: 1441px) {
+    .info {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1439px) {
+    .info {
+        padding: 0 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1110px) {
+    .info {
+        width: 100%;
+        &__wrapper {
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+            gap: 22px;
+        }
+    }
+}
+
+@media (max-width: 620px) {
+    .info {
+        margin-top: 32px;
+        &__img {
+            width: 100%;
+            height: 500px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__container {
+            padding-top: 0;
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 26px;
+        }
+        &__title {
+            font-size: 26px;
+            line-height: 34px;
+        }
+        &__descr1,
+        &__descr2 {
+            font-size: 15px;
+            line-height: 24px;
+        }
+        &__descr2 {
+            margin-top: 25px;
+        }
+        &__buy {
+            padding-bottom: 14px;
+        }
+        &__price {
+            margin-top: 13px;
+            font-size: 22px;
+            line-height: 34px;
+        }
+        &__btn {
+            width: 160px;
+            height: 52px;
+            font-size: 15px;
+            line-height: 26px;
+        }
+        &__buy-section {
+            padding-left: 0;
+        }
+        &__buy-descr {
+            width: 269px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .info {
+        &__img {
+            height: 345px;
+        }
+    }
+}
