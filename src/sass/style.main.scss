@@ -1,4 +1,79 @@
 @import "modules/nft-card";
+@import "modules/contact";
+
+main {
+    position: relative;
+    & > * {
+        z-index: 2;
+    }
+}
+.blur {
+    position: absolute;
+    width: 758px;
+    height: 700px;
+    opacity: 0.7;
+    filter: blur(124.532px);
+    z-index: 0 !important;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @media (max-width: 768px) {
+        transform: translateY(-50%) scale(0.7);
+    }
+
+    img {
+        position: absolute;
+        &:first-child {
+            margin-top: 7px;
+            left: 0;
+            z-index: 3;
+        }
+        &:nth-child(2) {
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        &:last-child {
+            margin-top: 47px;
+            right: 0;
+            z-index: 1;
+        }
+    }
+}
+.blur-1 {
+    top: 550px;
+    left: -370px;
+    opacity: 0.65;
+
+    @media (max-width: 768px) {
+        top: 15%;
+        left: -150px;
+    }
+}
+.blur-2 {
+    top: 33%;
+    left: 20px;
+
+    width: 700px;
+    height: 600px;
+
+    @media (max-width: 768px) {
+        top: 30%;
+        left: -116px;
+        transform: translateY(-50%) scale(0.5) !important;
+    }
+}
+.blur-3 {
+    bottom: 23%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+
+    @media (max-width: 768px) {
+        bottom: 23%;
+        left: 50%;
+        transform: translate(-50%, 0px) scale(0.6);
+    }
+}
 
 @mixin decor-box {
     position: absolute;
@@ -606,5 +681,14 @@
         @media (min-width: 600.1px) {
             transform: translate(0px, -31px);
         }
+    }
+}
+
+.contact {
+    margin-top: 24px;
+    margin-bottom: -4px;
+    
+    @media (max-width: 768px) {
+        padding-top: 14px !important;
     }
 }

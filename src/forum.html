@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html', {
+"title":"Artist-NFT",
+"thisStyle":"css/style.forum.min.css"
+})
+
+<body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    @@include('html/header.html', {})
+    <main>
+        <section class="forum-bg">
+            <img src="@img/forum/bg.jpg" alt="background">
+        </section>
+
+        <section class="forum-slider swiper">
+            <h2>Forum</h2>
+            <span><img src="@icons/star.svg" alt="star">Popular questions</span>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide forum-slider__slide forum-slide">
+                    <img src="@img/forum/profile1.jpg" alt="profile bg">
+                    <div class="forum-slide__content">
+                        <div>
+                            <img src="@img/forum/avatar.png" alt="profile bg">
+                            <span class="forum-slide__date">12/09/2021</span>
+                        </div>
+                        <div class="forum-slide__name">Ivan Ivanov</div>
+                        <div class="forum-slide__quest">How can i Buy any art by crypto?</div>
+                        <div class="forum-slide__buttons">
+                            <a href="#" class="button button_opacity"><span>View answers (23)</span></a>
+                            <button href="#">
+                                <img src="@icons/arrow-bot-left.svg" alt="arrow">
+                                Answer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide forum-slider__slide forum-slide">
+                    <img src="@img/forum/profile2.jpg" alt="profile bg">
+                    <div class="forum-slide__content">
+                        <div>
+                            <img src="@img/forum/avatar.png" alt="profile bg">
+                            <span class="forum-slide__date">12/09/2021</span>
+                        </div>
+                        <div class="forum-slide__name">Ivan Ivanov</div>
+                        <div class="forum-slide__quest">How can i Buy any art by crypto?</div>
+                        <div class="forum-slide__buttons">
+                            <a href="#" class="button button_opacity"><span>View answers (23)</span></a>
+                            <button href="#">
+                                <img src="@icons/arrow-bot-left.svg" alt="arrow">
+                                Answer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide forum-slider__slide forum-slide">
+                    <img src="@img/forum/profile3.jpg" alt="profile bg">
+                    <div class="forum-slide__content">
+                        <div>
+                            <img src="@img/forum/avatar.png" alt="profile bg">
+                            <span class="forum-slide__date">12/09/2021</span>
+                        </div>
+                        <div class="forum-slide__name">Ivan Ivanov</div>
+                        <div class="forum-slide__quest">How can i Buy any art by crypto?</div>
+                        <div class="forum-slide__buttons">
+                            <a href="#" class="button button_opacity"><span>View answers (23)</span></a>
+                            <button href="#">
+                                <img src="@icons/arrow-bot-left.svg" alt="arrow">
+                                Answer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="forum">
+            <div class="forum__questions questions">
+                <div class="questions__search">
+                    <span></span>
+                    <a href="#" class="button button_opacity"><span>Search</span></a>
+                </div>
+                <div class="questions__item quest">
+                    <div class="quest__head">
+                        <div class="quest__rating">
+
+                        </div>
+                        <img src="@img/forum/avatar.png" alt="profile bg">
+                        <div class="quest__name">
+                            <div class="forum-slide__name">Ivan Ivanov</div>
+                            <div class="forum-slide__quest">How can i Buy any art by crypto?</div>
+                        </div>
+                        <div class="quest__date">12/09/2021</div>
+                    </div>
+                    <div class="quest__text">
+                        <div>
+                            no purse as fully me or point. Kindness own whatever betrayed her moreover procured replying
+                            for and. Proposal indulged no do do sociable he throwing settling. Covered ten nor comfort
+                            offices carried. Age she way earnestly the fulfilled extremely. Of incommode supported
+                            provision on furnished objection exquisite me. Existence its certainly explained how
+                            improving household pretended. Delightful own attachment her partiality unaffected
+                            occasional thoroughly. Adieus it no wonder spirit houses.
+                        </div>
+                        <div class="quest__answers">
+                            <span>Ivan Ivanov</span>
+                            <div class="quest__answer">
+                                no purse as fully me or point. Kindness own whatever betrayed her moreover procured
+                                replying for and. Proposal indulged no do do sociable he throwing settling.
+                            </div>
+                        </div>
+                        <div class="quest__buttons">
+                            <a href="#" class="button button_opacity"><span>View answers (23)</span></a>
+                            <button href="#">
+                                <img src="@icons/arrow-bot-left.svg" alt="arrow">
+                                Answer
+                            </button>
+                        </div>
+                        <div class="quest__my-answer">
+                            <span>Your answer</span>
+                            <div class="quest__input">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forum__other">
+
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/forum.js"></script>
+</body>
+
+</html>
