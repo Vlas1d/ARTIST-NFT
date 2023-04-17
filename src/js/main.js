@@ -1,6 +1,7 @@
 const nft_slider = new Swiper('.nft-slider', {
     loop: true,
     slidesPerView: "auto",
+    grabCursor: 'true', 
     //centeredSlides: true,
     //mousewheel: true,
 

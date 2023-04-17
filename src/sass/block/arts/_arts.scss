@@ -6,6 +6,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 24px 30px;
+        
     }
 
     &__item {
@@ -24,12 +25,29 @@
             height: 100%;
         }
         &_wider {
-            width: min(100%, 720px);
+            width: min(100%, 730px);
+        }
+        &_inactive {
+            .buy {
+                display: none;
+            }
         }
     }
+    @media (min-width: 1441px) {
+        display: flex;
+        justify-content: center;
+        &__group {
+            width: 1115px;
+        }
+    } 
     @media (max-width: 768px) {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+.isPremium {
+    .lock {
+        display: none;
     }
 }
 .lock {
@@ -96,7 +114,6 @@
         }
     }
 }
-
 .buy {
     position: absolute;
     top: 50%;
@@ -114,8 +131,7 @@
             rgba(104, 128, 255, 0.9) 3.3%,
             rgba(60, 167, 244, 0.9) 52.35%,
             rgba(140, 69, 255, 0.9) 92.15%
-        ),
-        url(telegram-cloud-photo-size-2-5469661832827485049-y.jpg);
+        );
     border-radius: 12px;
     transition: all 0.5s linear 0.5s;
     top: 150%;

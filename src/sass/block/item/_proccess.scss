@@ -109,6 +109,12 @@
     }
 }
 
+.isPremium {
+    .lock {
+        display: none;
+    }
+}
+
 .lock {
     position: absolute;
     top: 50%;
@@ -123,7 +129,6 @@
     justify-content: center;
     border-radius: 12px;
     backdrop-filter: blur(11px) brightness(50%);
-    display: none;
 
     &__title {
         margin-top: 14px;
@@ -154,7 +159,7 @@
 
     &__link {
         margin-top: 19px;
-        padding: 25px 0 18px 30px;
+        padding: 20px 0 18px 30px;
         width: 134px;
         height: 64px;
         display: flex;

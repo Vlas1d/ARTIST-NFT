@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             passLogin: passLogin.value
         };
 
-        /* await fetch(
+        await fetch(
             "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select * from hHp8vjTTDHUSCcBq where email='" +
                 person.email +
                 "'"
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 console.log(res.status);
             }
-        }); */
+        });
     });
     formReg.addEventListener('submit', async e => {
         e.preventDefault();
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             elem.checked ? (person.data.role = elem.id) : null;
         });
 
-        /* await fetch(
+        await fetch(
             "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select * from hHp8vjTTDHUSCcBq where email='" +
                 person.data.email +
                 "'"
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 console.log(res.status);
             }
-        }); */
+        });
     });
 
     async function digestPass(password) {
