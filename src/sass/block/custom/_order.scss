@@ -55,6 +55,7 @@
         position: relative;
         background: #212426;
         border-radius: 9px;
+        cursor: pointer;
     }
 
     &__selected {
@@ -75,7 +76,7 @@
         border-radius: 9px;
         display: none;
         &_active {
-            display: none;
+            display: block;
         }
     }
 
@@ -113,6 +114,7 @@
         border-radius: 50%;
         border: 4px solid #1d1f21;
         cursor: pointer;
+        transition: all 0.2s;
         &_red {
             background: #ca3838;
         }
@@ -161,6 +163,9 @@
         &:first-child {
             margin-left: 0;
         }
+        &_active {
+            border-color: #949494;
+        }
     }
     &__textarea {
         margin-top: 7px;
@@ -175,7 +180,7 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 21px;
-        color: #C8D2DC;
+        color: #c8d2dc;
     }
     &__btn {
         margin-top: 5px;

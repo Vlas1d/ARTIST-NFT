@@ -1,0 +1,527 @@
+.forum-bg {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        top: 2px;
+        left: 0px;
+        width: 100%;
+
+        @media (max-width: 768px) {
+            top: 8px;
+        }
+    }
+    img {
+        width: 100%;
+        aspect-ratio: 1440/317;
+
+        min-height: 317px;
+    }
+}
+
+.forum-slider {
+
+    max-width: 1150px;
+    width: 100%;
+
+    padding: 51px 20px 0px !important;
+    margin: 0px auto;
+
+    @media (max-width: 768px) {
+        padding: 43px 15px 0px !important;
+    }
+
+    h2 {
+        margin-left: 1px;
+
+        @media (max-width: 768px) {
+            margin-left: 2px;
+        }
+    }
+    & > span {
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        @media (max-width: 768px) {
+            margin-top: 4px;
+            font-size: 18px;
+            line-height: 26px;
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 7px;
+            }
+        }
+
+        img {
+            margin-right: 11px;
+        }
+    }
+
+    .swiper-wrapper {
+        margin-top: 23px;
+    }
+	&__slide {
+        max-width: 350px;
+        width: auto !important;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+            max-width: 290px;
+        }
+	}
+}
+
+.forum-slide {
+
+    & > *:first-child {
+        img {
+            width: 350px;
+            height: 175px;
+        }
+    }
+
+    background: #212426;
+    border-radius: 12px;
+    overflow: hidden;
+
+	&__content {
+        position: relative;
+        padding: 0px 25px 10px 28px;
+
+        @media (max-width: 768px) {
+            padding: 0px 10px 10px 12px;
+        }
+
+        & > *:first-child {
+            position: relative;
+            margin-top: -56px;
+
+            @media (max-width: 768px) {
+                margin-top: -43px;
+            }
+
+            img {
+                width: 92px;
+                height: 92px;
+                margin-left: -7px;
+
+                @media (max-width: 768px) {
+                    width: 70px;
+                    height: 70px;
+                    margin-left: 0px;
+                }
+            }
+        }
+	}
+
+
+	&__date {
+        position: absolute;
+        bottom: 20px;
+        right: -3px;
+
+        font-family: 'Manrope';
+        font-size: 14px;
+        line-height: 19px;
+        color: #C8D2DC;
+
+        @media (max-width: 768px) {
+            bottom: 7px;
+            right: 1px;
+        }
+	}
+
+	&__name {
+        margin-top: 4px;
+
+        font-family: 'Manrope';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #C8D2DC;
+
+        @media (max-width: 768px) {
+            margin-top: 6px;
+        }
+	}
+
+	&__quest {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+
+        @media (max-width: 768px) {
+            font-size: 18px;
+            line-height: 26px;
+        }
+	}
+
+	&__buttons {
+        display: flex;
+        padding: 5px 0px 11px;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            padding: 14px 0px 18px;
+        }
+
+        .button {
+            max-width: 153px;
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+
+            font-size: 14px;
+            line-height: 20px;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            color: #C5FF98;
+        }
+	}
+}
+
+//------------------------------------------------------------------------------
+
+.forum {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 1150px;
+    width: 100%;
+
+    padding: 56px 20px 50px !important;
+    margin: 0px auto;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__questions {
+        @media (max-width: 768px) {
+            order: 2;
+        }
+    }
+
+
+    &__other {
+        max-width: 365px;
+        width: 100%;
+        transform: translate(30px, 0px);
+        margin: 0px 15px 0px 0px;
+
+        @media (max-width: 768px) {
+            order: 1;
+            margin: 0px 0px 0px 0px;
+            display: flex;
+            justify-content: center;
+
+            transform: translate(0px, 0px);
+        }
+
+        & > * {
+            background: #212426;
+            border-radius: 12px;
+        }
+    }
+
+    &__asking {
+        padding: 21px 29px 24px;
+        margin-bottom: 18px;
+
+        .gradient-text {
+            margin-bottom: 1px;
+        }
+        h4 {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 14px;
+            line-height: 21px;
+            color: #C8D2DC;
+            margin-bottom: 6px;
+        }
+        input, textarea {
+            width: 100%;
+            height: 64px;
+            padding: 0px 31px;
+            margin-bottom: 17px;
+
+            font-size: 16px;
+            line-height: 21px;
+            color: #C8D2DC;
+
+            &::placeholder {
+                font-size: 16px;
+                line-height: 21px;
+                color: #C8D2DC;
+            }
+
+            background: #2C2F33;
+            border-radius: 9px;
+        }
+        #question-text {
+            max-width: 100%;
+            max-height: 400px;
+            overflow-y: auto;
+
+            padding-top: 21px;
+            height: 196px;
+
+
+            white-space: wrap;
+        }
+        .button {
+            margin-top: -10px;
+            border-radius: 12px;
+            height: 56px;
+        }
+    }
+
+    &__stats {
+        padding: 27px 32px 4px;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+
+        & > *:first-child {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 16px;
+        }
+        & > *:not(:first-child) {
+            display: grid;
+            grid-template-columns: 53.5% 50%;
+
+            & > * {
+                margin-bottom: 25px;
+            }
+
+            h2 {
+                margin-top: -4px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 21px;
+                color: #C8D2DC;
+            }
+        }
+    }
+
+}
+.questions {
+    max-width: 730px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+
+    &__search {
+        position: relative;
+        height: 64px;
+
+        & > *:not(input) {
+            position: absolute;
+        }
+
+        & > span {
+            top: 36%;
+            left: 25px;
+
+            width: 16px;
+            height: 16px;
+
+            border-radius: 50%;
+            border: 2px solid #fff;
+
+            &::after {
+                content: '';
+                display: flex;
+                width: 8px;
+                height: 2px;
+                border-radius: 2px;
+
+                background: #fff;
+                transform: translate(10px, 13px) rotate(45deg);
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0px 20px 0px 59px;
+
+            background: #212426;
+            border: 1px solid #525960;
+            border-radius: 12px;
+
+            font-family: 'Manrope';
+            font-size: 14px;
+            line-height: 19px;
+            color: #fff;
+
+            &:focus {
+                outline-color: #C5FF98;
+            }
+            &::placeholder {
+                font-family: 'Manrope';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #C8D2DC;
+            }
+        }
+
+        & > .button {
+            position: absolute;
+            top: 50%;
+            right: 11px;
+    
+            min-width: 88px;
+            width: 88px;
+            height: 48px;
+    
+            font-size: 14px;
+            line-height: 20px;
+    
+            border-radius: 12px;
+            transform: translate(0px, -50%);
+        }    
+    }
+
+    &__item {
+    }
+}
+.quest {
+    position: relative;
+    padding: 18px 22px 13px;
+
+    background: #212426;
+    border-radius: 12px;
+
+    &__head {
+        display: flex;
+        align-items: center;
+
+        picture {
+            img {
+                width: 40px;
+                height: 40px;
+
+                margin-top: 4px;
+
+                margin-right: 17px;
+            }
+        }
+    }
+
+    &__rating {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-right: 16px;
+    }
+
+    &__rating-num {
+        font-size: 14px;
+        line-height: 21px;
+        color: #C8D2DC;
+    }
+
+    &__name {
+    }
+
+    &__date {
+        position: absolute;
+        top: 38px;
+        right: 39px;
+
+        font-family: 'Manrope';
+        font-size: 14px;
+        line-height: 19px;
+        color: #C8D2DC;
+
+        @media (max-width: 920px) {
+            top: 25px;
+        }
+    }
+
+    &__text {
+        padding: 3px 10px 5px 89px;
+        & > *:first-child {
+            padding-right: 10px;
+        }
+    }
+
+    &__answers {
+        opacity: 0;
+        height: 0px;
+    }
+
+    &__answer {
+    }
+
+    &__buttons {
+        display: flex;
+        padding: 16px 0px 11px;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            padding: 14px 0px 18px;
+        }
+
+        .button {
+            max-width: 153px;
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+
+            font-size: 14px;
+            line-height: 20px;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 20px;
+            color: #C5FF98;
+        }
+    }
+
+    &__my-answer {
+        opacity: 0px;
+        height: 0px;
+    }
+
+    &__input {
+    }
+}
+.forum-slide {
+
+    &__name {
+    }
+
+    &__quest {
+    }
+}

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/style.custom.min.css">
 </head>
-<!-- TODO добавить js к странице -->
 <body>
     @@include('html/header.html', {})
     <section class="promo">
@@ -22,7 +21,7 @@
         <div class="promo__subtitle">
             Indulgence announcing uncommonly met she continuing two unpleasing terminated
         </div>
-        <a href="#" class="promo__link button_gradient">
+        <a href="#order" class="promo__link button_gradient">
             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M18 7.5H16V6.5C16 4.3 14.2 2.5 12 2.5C9.8 2.5 8 4.3 8 6.5V7.5H6C4.9 7.5 4 8.4 4 9.5V19.5C4 21.2 5.3 22.5 7 22.5H17C18.7 22.5 20 21.2 20 19.5V9.5C20 8.4 19.1 7.5 18 7.5ZM10 6.5C10 5.4 10.9 4.5 12 4.5C13.1 4.5 14 5.4 14 6.5V7.5H10V6.5Z"
@@ -94,7 +93,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -129,7 +128,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -164,7 +163,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -199,7 +198,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -234,7 +233,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -269,7 +268,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -291,7 +290,7 @@
                     </div>
                 </div>
             </div>
-            <div class="arts__item">
+            <div class="arts__item arts__item_inactive">
                 <img src="@img/arts/picture-mini.png" alt="picture">
                 <div class="lock">
                     <div class="lock__title">
@@ -321,9 +320,6 @@
                         </svg>
                     </a>
                 </div>
-            </div>
-            <div class="arts__item">
-                <img src="@img/arts/picture-mini.png" alt="picture">
                 <div class="buy">
                     <div class="buy__title">
                         Title of picture
@@ -335,7 +331,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -370,7 +366,7 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
-                        <a href="#" class="buy__link">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -405,7 +401,42 @@
                         $100 322
                     </div>
                     <div class="buy__wrapper">
+                        <a href="@html/item.html" class="buy__link">
+                            <span>Buy</span>
+                        </a>
                         <a href="#" class="buy__link">
+                            <span>View</span>
+                            <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.0001 13.5001L14.5901 13.5001L11.2901 16.7901C11.1018 16.9784 10.996 17.2338 10.996 17.5001C10.996 17.7664 11.1018 18.0218 11.2901 18.2101C11.4784 18.3984 11.7338 18.5041 12.0001 18.5041C12.2664 18.5041 12.5218 18.3984 12.7101 18.2101L17.7101 13.2101C17.8011 13.115 17.8725 13.0028 17.9201 12.8801C18.0201 12.6366 18.0201 12.3635 17.9201 12.1201C17.8725 11.9973 17.8011 11.8852 17.7101 11.7901L12.7101 6.79006C12.6171 6.69633 12.5065 6.62194 12.3847 6.57117C12.2628 6.5204 12.1321 6.49426 12.0001 6.49426C11.8681 6.49426 11.7374 6.5204 11.6155 6.57117C11.4937 6.62194 11.3831 6.69633 11.2901 6.79006C11.1964 6.88302 11.122 6.99362 11.0712 7.11548C11.0204 7.23734 10.9943 7.36805 10.9943 7.50006C10.9943 7.63207 11.0204 7.76278 11.0712 7.88464C11.122 8.00649 11.1964 8.11709 11.2901 8.21006L14.5901 11.5001L7.0001 11.5001C6.73489 11.5001 6.48053 11.6054 6.293 11.793C6.10546 11.9805 6.0001 12.2348 6.0001 12.5001C6.0001 12.7653 6.10546 13.0196 6.293 13.2072C6.48053 13.3947 6.73489 13.5001 7.0001 13.5001Z"
+                                    fill="url(#paint0_linear_55_1254)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear_55_1254" x1="17.1974" y1="13.6251" x2="7.49307"
+                                        y2="12.8142" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#68C9FF" />
+                                        <stop offset="0.994746" stop-color="#D1B5FF" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="arts__item">
+                <img src="@img/arts/picture-mini.png" alt="picture">
+                <div class="buy">
+                    <div class="buy__title">
+                        Title of picture
+                    </div>
+                    <div class="buy__subtitle">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum dolor ipsum dolor
+                    </div>
+                    <div class="buy__price">
+                        $100 322
+                    </div>
+                    <div class="buy__wrapper">
+                        <a href="@html/item.html" class="buy__link">
                             <span>Buy</span>
                         </a>
                         <a href="#" class="buy__link">
@@ -429,7 +460,7 @@
             </div>
         </div>
     </section>
-    <section class="order">
+    <section class="order" id="order">
         <div class="order__title">
             CUSTOM BY YOUR OWN
         </div>
@@ -457,7 +488,7 @@
                     </defs>
                 </svg>
 
-                <div class="order__select-list">
+                <div class="order__select-list order__select-list-type">
                     <div class="order__select-item">
                         T-SHIRT
                     </div>
@@ -473,7 +504,7 @@
                         Color
                     </div>
                     <div class="order__select-color">
-                        <div class="order__color order__color_red">
+                        <div class="order__color order__color_red order__color_active">
                         </div>
                         <div class="order__color order__color_orange">
                         </div>
@@ -510,7 +541,7 @@
                         Size
                     </div>
                     <div class="order__select">
-                        <div class="order__selected order__selected-type">
+                        <div class="order__selected order__selected-size">
                             XL (99-99-99)
                         </div>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -526,7 +557,7 @@
                             </defs>
                         </svg>
         
-                        <div class="order__select-list">
+                        <div class="order__select-list order__select-list-size">
                             <div class="order__select-item">
                                 XL (99-99-99)
                             </div>
@@ -587,6 +618,9 @@
                 fill="#86A8FF" />
         </svg>
     </div>
+
+    <script src="js/cookieOperation.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 
 </html>

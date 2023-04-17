@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     @@include('html/header.html', {})
     <main>
+        <div class="blur blur-1">
+            <img src="@icons/blur/blur-one.svg" alt="blur">
+            <img src="@icons/blur/blur-two.svg" alt="blur">
+            <img src="@icons/blur/blur-three.svg" alt="blur">
+        </div>
+        <div class="blur blur-2">
+            <img src="@icons/blur/blur-one.svg" alt="blur">
+            <img src="@icons/blur/blur-two.svg" alt="blur">
+            <img src="@icons/blur/blur-three.svg" alt="blur">
+        </div>
+        <div class="blur blur-3">
+            <img src="@icons/blur/blur-one.svg" alt="blur">
+            <img src="@icons/blur/blur-two.svg" alt="blur">
+            <img src="@icons/blur/blur-three.svg" alt="blur">
+        </div>
+
         <section class="main-window">
             <div class="main-window__text">
                 <span class="main-window__social">
@@ -144,7 +160,10 @@
             </div>
         </section>
 
+        @@include('html/contact.html', {})
+
     </main>
+    <script src="js/cookieOperation.js"></script>
     @@include('html/footer.html', {})
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

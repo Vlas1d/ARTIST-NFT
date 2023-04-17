@@ -1,11 +1,9 @@
-/* document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener('DOMContentLoaded', async () => {
     if(getCookie('isLogin')) {
-        console.log(true);
-        console.log(getCookie('email'));
         await fetch(
             "https://api.apispreadsheets.com/data/hHp8vjTTDHUSCcBq/?query=select * from hHp8vjTTDHUSCcBq where email='" +
                 getCookie('email') +
-                "'"
+                "'",
         ).then(res => {
             if (res.status === 200){
                 res.json().then(data => {
@@ -26,4 +24,4 @@
     } else {
         console.log(false);
     }
-}) */
+})
