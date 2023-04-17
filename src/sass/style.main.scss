@@ -3,6 +3,9 @@
 
 main {
     position: relative;
+    & > * {
+        z-index: 2;
+    }
 }
 .blur {
     position: absolute;
@@ -10,8 +13,14 @@ main {
     height: 700px;
     opacity: 0.7;
     filter: blur(124.532px);
-    z-index: 0;
+    z-index: 0 !important;
     transform: translateY(-50%);
+    pointer-events: none;
+
+    @media (max-width: 768px) {
+        transform: translateY(-50%) scale(0.7);
+    }
+
     img {
         position: absolute;
         &:first-child {
@@ -35,18 +44,35 @@ main {
     top: 550px;
     left: -370px;
     opacity: 0.65;
+
+    @media (max-width: 768px) {
+        top: 15%;
+        left: -150px;
+    }
 }
 .blur-2 {
-    top: 44%;
+    top: 33%;
     left: 20px;
 
     width: 700px;
     height: 600px;
+
+    @media (max-width: 768px) {
+        top: 30%;
+        left: -116px;
+        transform: translateY(-50%) scale(0.5) !important;
+    }
 }
 .blur-3 {
-    bottom: 12%;
-    left: 23%;
+    bottom: 23%;
+    left: 50%;
+    transform: translate(-50%, 0px);
 
+    @media (max-width: 768px) {
+        bottom: 23%;
+        left: 50%;
+        transform: translate(-50%, 0px) scale(0.6);
+    }
 }
 
 @mixin decor-box {
