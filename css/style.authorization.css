@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../fonts/ProximaNova-Extrabld.woff") format(woff), url("../../fonts/ProximaNova-Extrabld.ttf") format(truetype);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../fonts/ProximaNova-Bold.woff") format(woff), url("../../fonts/ProximaNova-Bold.ttf") format(truetype);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../fonts/ProximaNova-Semibold.woff") format(woff), url("../../fonts/ProximaNova-Semibold.ttf") format(truetype);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../fonts/ProximaNova-Regular.woff") format(woff), url("../../fonts/ProximaNova-Regular.ttf") format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../../fonts/ProximaNova-Light.woff") format(woff), url("../../fonts/ProximaNova-Light.ttf") format(truetype);
+  font-weight: 300;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1d1f21;
+  position: relative;
+}
+
+.authorization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.authorization__title {
+  margin-top: 3px;
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  color: #fcffff;
+  text-align: center;
+}
+
+.authorization__switch {
+  padding: 7px 8px;
+  margin-top: 13px;
+  width: 274px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #212426;
+  border-radius: 12px;
+}
+
+.authorization__login,
+.authorization__registration {
+  width: 129px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  border-radius: 12px;
+  color: #fff;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.authorization__login:hover,
+.authorization__registration:hover {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d1f21;
+  background: -o-linear-gradient(355.22deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+}
+
+.authorization__login_active,
+.authorization__registration_active {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1d1f21;
+  background: -o-linear-gradient(355.22deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+}
+
+.form__login,
+.form__registration {
+  margin-top: 20px;
+  width: 410px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__login label,
+.form__registration label {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c8d2dc;
+}
+
+.form__login input,
+.form__registration input {
+  padding-left: 32px;
+  margin-top: 7px;
+  height: 64px;
+  background: #212426;
+  border-radius: 9px;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #c8d2dc;
+  outline: none;
+}
+
+.form__login_active,
+.form__registration_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__login label:last-of-type {
+  margin-top: 15px;
+}
+
+.form__btn {
+  margin-top: 20px;
+  width: 100%;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -o-linear-gradient(355.22deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  border-radius: 16px;
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #1d1f21;
+  cursor: pointer;
+}
+
+.form__info {
+  margin-top: 15px;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c8d2dc;
+  text-align: center;
+}
+
+.form__info span {
+  margin-left: 5px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-decoration-line: underline;
+  color: #86a8ff;
+  cursor: pointer;
+}
+
+.form__fieldset {
+  margin-top: 15px;
+  margin-bottom: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.form__fieldset label {
+  margin-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fcffff;
+}
+
+.form__fieldset label::before {
+  content: "";
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #212426;
+  border: 4px solid #212426;
+  outline: 1px solid #525960;
+}
+
+.form__fieldset input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__fieldset input:checked + .form__fieldset-label::before {
+  background: -o-linear-gradient(355.22deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  background: linear-gradient(94.78deg, #68c9ff 9.27%, #d1b5ff 84.06%);
+  outline-color: #86a8ff;
+}
+
+.form__fieldset-title {
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c8d2dc;
+}
+
+.registrationPassword {
+  margin-top: 15px;
+  font-family: "Proxima Nova";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #c8d2dc;
+  text-align: center;
+}
+
+.blur-left,
+.blur-right {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.blur-left {
+  left: 0;
+}
+
+.blur-right {
+  right: 0;
+}
+
+.sircle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 362px;
+  top: 382px;
+  opacity: 0.4;
+  border: 1px solid #fcffff;
+  border-radius: 50%;
+}
+
+.star {
+  position: absolute;
+  left: 363px;
+  top: 237px;
+}
