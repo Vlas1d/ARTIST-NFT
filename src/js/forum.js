@@ -13,3 +13,15 @@ const forum_slider = new Swiper('.forum-slider', {
         }
     },
 });
+
+//--------------------------------------------------------------
+
+const questions = document.querySelector('.questions');
+
+const answersBox = document.querySelectorAll('.quest__answers');
+const myAnswerBox = document.querySelectorAll('.quest__my-answer')
+const answersButtons = document.querySelectorAll('.quest__buttons');
+
+questions.addEventListener('click', function () {
+
+});
