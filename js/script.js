@@ -72,13 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const goToPersonalCab = role => {
         switch (role) {
             case 'admin':
-                return '/personal-cabinet-owner.html';
+                return '/ARTIST-NFT/personal-cabinet-owner.html';
                 break;
             case 'customer':
-                return '/personal-cabinet-client.html';
+                return '/ARTIST-NFT/personal-cabinet-client.html';
                 break;
             case 'artist':
-                return '/personal-cabinet-worker.html';
+                return '/ARTIST-NFT/personal-cabinet-worker.html';
                 break;
             default:
                 break;
