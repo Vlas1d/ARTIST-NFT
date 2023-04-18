@@ -208,6 +208,8 @@
     @media (max-width: 768px) {
         flex-direction: column;
         align-items: center;
+
+        padding: 16px 15px 50px !important;
     }
 
     &__questions {
@@ -229,10 +231,13 @@
             display: flex;
             justify-content: center;
 
+            max-width: 100%;
+
             transform: translate(0px, 0px);
         }
 
         & > * {
+            width: 100%;
             background: #212426;
             border-radius: 12px;
         }
@@ -241,6 +246,23 @@
     &__asking {
         padding: 21px 29px 24px;
         margin-bottom: 18px;
+
+        @media (max-width: 768px) {
+            padding: 18px 19px;
+            margin-bottom: 16px;
+
+            h4 {
+                font-size: 22px;
+                line-height: 34px;
+
+                margin-top: -10px;
+                margin-bottom: 14px;
+            }
+            .button {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
 
         .gradient-text {
             margin-bottom: 1px;
@@ -403,6 +425,10 @@
     
             border-radius: 12px;
             transform: translate(0px, -50%);
+
+            @media (max-width: 768px) {
+                right: 9px;
+            }
         }    
     }
 
@@ -416,9 +442,26 @@
     background: #212426;
     border-radius: 12px;
 
+    @media (max-width: 768px) {
+        padding: 17px 17px 20px 22px;
+    }
+
     &__head {
         display: flex;
         align-items: center;
+
+        @media (max-width: 768px) {
+            picture {
+                img {
+                    width: 32px;
+                    height: 32px;
+    
+                    margin-top: 4px;
+    
+                    margin-right: 6px;
+                }
+            }
+        }
 
         picture {
             img {
@@ -447,6 +490,21 @@
     }
 
     &__name {
+        @media (max-width: 768px) {
+            position: relative;
+            width: 100%;
+
+            .forum-slide__quest {
+                position: absolute;
+                bottom: -40px;
+                left: -38px;
+
+                width: 300px;
+            }
+            .forum-slide__name {
+                margin-top: -3px;
+            }
+        }
     }
 
     &__date {
@@ -462,12 +520,24 @@
         @media (max-width: 920px) {
             top: 25px;
         }
+        @media (max-width: 768px) {
+            top: 37px;
+            right: 25px;
+
+            font-family: 'Proxima Nova';
+            font-size: 14px;
+            line-height: 21px;
+        }
     }
 
     &__text {
         padding: 3px 10px 5px 89px;
         & > *:first-child {
             padding-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 25px 0px 5px 32px;
         }
     }
 
