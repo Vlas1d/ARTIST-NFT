@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const goToPersonalCab = (cabinet) => {
         switch (cabinet) {
             case 'admin':
-                document.location.href = '/personal-cabinet-owner.html'
+                document.location.href = 'personal-cabinet-owner.html'
                 break;
             case 'customer':
-                document.location.href = '/personal-cabinet-client.html'
+                document.location.href = 'personal-cabinet-client.html'
                 break;
             case 'artist':
-                document.location.href = '/personal-cabinet-worker.html'
+                document.location.href = 'personal-cabinet-worker.html'
                 break;
             default:
                 break;
