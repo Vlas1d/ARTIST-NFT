@@ -544,7 +544,9 @@
     &__answers {
         opacity: 0;
         height: 0px;
-        overflow: hidden;
+        overflow-y: scroll;
+
+        transition: all 0.3s ease 0s;
 
         span {
             font-family: 'Manrope';
@@ -554,7 +556,7 @@
 
         &.show {
             opacity: 1;
-            height: auto;
+            height: 112px;
 
             margin: 13px 0px 15px 0px;
 
@@ -607,6 +609,8 @@
         height: 0px;
         overflow: hidden;
 
+        transition: all 0.3s ease 0s;
+
         & > span {
             color: #C8D2DC;
             font-size: 14px;
@@ -616,7 +620,7 @@
 
         &.show {
             opacity: 1;
-            height: auto;
+            height: 113px;
             padding-bottom: 18px;
 
             .quest__input {
